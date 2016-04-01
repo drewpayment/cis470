@@ -186,6 +186,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="EmployeeEditCustomerInformation.aspx" />
     <Content Include="frmCustomerInformationEdit.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -290,6 +291,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEditCustomerInformation.aspx.cs">
+      <DependentUpon>EmployeeEditCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeEditCustomerInformation.aspx.designer.cs">
+      <DependentUpon>EmployeeEditCustomerInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmCustomerInformationEdit.aspx.cs">
       <DependentUpon>frmCustomerInformationEdit.aspx</DependentUpon>
