@@ -11,7 +11,7 @@
     <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridViewCustomerInformation" runat="server">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:wscompanyConnectionString %>" ProviderName="<%$ ConnectionStrings:wscompanyConnectionString.ProviderName %>" SelectCommand="SELECT [custFirstName], [custLastName], [custAddress], [custCity], [custState], [custZip], [custPhone], [custEmail] FROM [customer]"></asp:SqlDataSource>
         <br />
