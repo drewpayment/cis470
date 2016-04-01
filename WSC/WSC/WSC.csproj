@@ -1,4 +1,3 @@
-
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -187,6 +186,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="EmployeeEditCustomerInformation.aspx" />
     <Content Include="frmCustomerInformationEdit.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -292,6 +292,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeEditCustomerInformation.aspx.cs">
+      <DependentUpon>EmployeeEditCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeEditCustomerInformation.aspx.designer.cs">
+      <DependentUpon>EmployeeEditCustomerInformation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmCustomerInformationEdit.aspx.cs">
       <DependentUpon>frmCustomerInformationEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -351,7 +358,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
->>>>>>> b02706e9899a0012ca6b0f84109e6b1be64feb75
+
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
