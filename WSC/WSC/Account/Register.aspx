@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WSC.Account.Register" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
        <h2>Register to create a new account</h2>
     </hgroup>
-
     <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser" style="text-align: left; float: left; z-index: 1; left: auto; top: 181px; position: relative; height: 792px; width: 1091px;">
         <LayoutTemplate>
             <asp:PlaceHolder runat="server" ID="wizardStepPlaceholder" />
