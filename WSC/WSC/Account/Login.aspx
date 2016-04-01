@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WSC.Account.Login" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <hgroup class="title">
-      </hgroup>
+<asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <section id="loginForm">
         <h2></h2>
         <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">

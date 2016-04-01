@@ -10,13 +10,9 @@
                 Williams Specialty Company is small printing and engraving company specailized in serving all of your printing and engraving needs. Shop now and enter your own personalized message or logo for us to masterfully print or engrave onto your purchase selections. Make it your own, today!</p>
             <p>
                 &nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Shop Now" />
+                <asp:Button ID="Button1" runat="server" Text="Shop Now" OnClick="Button1_Click" PostBackUrl="~/Catalog.aspx" />
             </p>
         </div>
-    </section>
-</asp:Content>
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    
     <address>
         Williams Specialty Company</address>
     <address>
@@ -25,5 +21,6 @@
         Staten Island, New York 10309</address>
     <address>
         (800)867-5309</address>
-    
+    </section>
 </asp:Content>
+
