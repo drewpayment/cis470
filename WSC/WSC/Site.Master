@@ -53,6 +53,8 @@
                     <li><a runat="server" href="frmCustomerInformationEdit.aspx">Customer Information</a></li>
                     <li><a runat="server" href="EmployeeEditCustomerInformation.aspx">Edit Customer Information</a></li>
                     <li><a runat="server" href="EditCatalog.aspx">Edit Catalog</a></li>
+                    <li><a runat="server" href="QualityAssurance.aspx">QA</a></li>
+                    <li><a runat="server" href="EmployeeReviewOrder.aspx">Review Orders</a></li>
                 </ul>
             </asp:ContentPlaceHolder>
             <br />
