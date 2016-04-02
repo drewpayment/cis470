@@ -205,8 +205,11 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\plaque.jpg" />
     <Content Include="Images\plaques.jpg" />
+    <Content Include="Images\shirt.png" />
     <Content Include="Images\trophies.jpg" />
+    <Content Include="Images\trophy.jpg" />
     <Content Include="packages.config" />
     <Content Include="Catalog.aspx" />
     <Content Include="dsCustomer.xsc">
@@ -247,6 +250,9 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ViewClothing.aspx" />
+    <Content Include="ViewPlaques.aspx" />
+    <Content Include="ViewTrophies.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -324,6 +330,27 @@
     <Compile Include="Catalog.aspx.designer.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewClothing.aspx.cs">
+      <DependentUpon>ViewClothing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewClothing.aspx.designer.cs">
+      <DependentUpon>ViewClothing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPlaques.aspx.cs">
+      <DependentUpon>ViewPlaques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPlaques.aspx.designer.cs">
+      <DependentUpon>ViewPlaques.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTrophies.aspx.cs">
+      <DependentUpon>ViewTrophies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTrophies.aspx.designer.cs">
+      <DependentUpon>ViewTrophies.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,7 +385,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

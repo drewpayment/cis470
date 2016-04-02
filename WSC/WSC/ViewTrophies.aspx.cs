@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WSC
 {
-	public partial class ViewClothing : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class ViewTrophies : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
-	}
+        }
+    }
 }
