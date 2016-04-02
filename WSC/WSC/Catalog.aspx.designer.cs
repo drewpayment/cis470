@@ -31,6 +31,24 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
         
         /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        
+        /// <summary>
+        /// HyperLink4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+        
+        /// <summary>
         /// Panel2 control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,24 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
         
         /// <summary>
+        /// HyperLink2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        
+        /// <summary>
+        /// HyperLink5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
+        
+        /// <summary>
         /// Panel3 control.
         /// </summary>
         /// <remarks>
@@ -65,5 +101,23 @@ namespace WSC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
+        
+        /// <summary>
+        /// HyperLink3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        
+        /// <summary>
+        /// HyperLink6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink6;
     }
 }

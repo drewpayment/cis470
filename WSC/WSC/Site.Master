@@ -50,6 +50,8 @@
                 <ul id="menu">
                     <li><a runat="server" href="~/">Home</a></li>
                     <li><a runat="server" href="Catalog.aspx">Catalog</a></li>
+                    <li><a runat="server" href="frmCustomerInformationEdit.aspx">Customer Information</a></li>
+                    <li><a runat="server" href="EmployeeEditCustomerInformation.aspx">Edit Customer Information</a></li>
                 </ul>
             </asp:ContentPlaceHolder>
             <br />

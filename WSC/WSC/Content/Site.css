@@ -336,7 +336,7 @@ aside {
 #loginForm {
     border-right: solid 2px #c8c8c8;
     float: left;
-    width: 55%;
+    width: 48%;
 }
 
     #loginForm .validation-error {
@@ -413,8 +413,7 @@ fieldset {
         font-size: 1.2em;
         margin: 5px 0 6px 0;
         padding: 5px;
-        width: 300px;
-    }
+        }
 
     textarea {
         font-family: inherit;
@@ -441,8 +440,7 @@ fieldset {
         font-weight: 600;
         padding: 7px;
         margin-right: 8px;
-        width: auto;
-    }
+        }
 
     td input[type="submit"],
     td input[type="button"],
