@@ -1,18 +1,28 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmployeeEditCustomerInformation.aspx.cs" Inherits="WSC.EmployeeEditCustomerInformation" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeEditCustomerInformation.aspx.cs" Inherits="WSC.EmployeeEditCustomerInformation" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+
+<asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
+    <hgroup class="title">
+      <h2>Edit Customer Information</h2>
+    </hgroup>
+    <section id="editCustomerInformation">   
+
+    
     <div>
     
     </div>
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
-    </form>
-</body>
-</html>
+  
+
+    </section>
+</asp:Content>
+<asp:Content runat="server" contentplaceholderid="HeadContent">
+    <style type="text/css">
+        .auto-style1 {
+            font-size: medium;
+            width: 299px;
+        }
+    </style>
+</asp:Content>

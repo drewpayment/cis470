@@ -1,13 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmCustomerInformationEdit.aspx.cs" Inherits="WSC.frmCustomerInformationEdit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="frmCustomerInformationEdit.aspx.cs" Inherits="WSC.frmCustomerInformationEdit" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content  runat="server" ContentPlaceHolderID="FeaturedContent">
+    <hgroup class="title">
+      <h2>Customer Information</h2>
+    </hgroup>
+<section id="customerInformationEdit">
     <div>
     
     </div>
@@ -19,6 +17,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
         <br />
-    </form>
-</body>
-</html>
+    
+</section>
+</asp:Content>
+<asp:Content runat="server" contentplaceholderid="HeadContent">
+    <style type="text/css">
+        .auto-style1 {
+            font-size: medium;
+            width: 299px;
+        }
+    </style>
+</asp:Content>
