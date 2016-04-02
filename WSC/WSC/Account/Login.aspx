@@ -2,10 +2,9 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <section id="loginForm">
-        <h2></h2>
-        <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
+         <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
             <LayoutTemplate>
-                <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
+                <table cellpadding="1" cellspacing="0">
                     <tr>
                         <td>
                             <table cellpadding="0">
