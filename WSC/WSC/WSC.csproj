@@ -132,6 +132,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="CartItemAdded.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -187,7 +188,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="CustomerStartNewOrder.aspx" />
+    <Content Include="EditCatalog.aspx" />
     <Content Include="EmployeeEditCustomerInformation.aspx" />
     <Content Include="EmployeeReviewOrder.aspx" />
     <Content Include="frmCustomerInformationEdit.aspx" />
@@ -213,6 +214,7 @@
     <Content Include="Images\shirt.png" />
     <Content Include="Images\trophies.jpg" />
     <Content Include="Images\trophy.jpg" />
+    <Content Include="OrderSubmitted.aspx" />
     <Content Include="packages.config" />
     <Content Include="Catalog.aspx" />
     <Content Include="dsCustomer.xsc">
@@ -227,6 +229,7 @@
       <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="QualityAssurance.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -296,14 +299,14 @@
     <Compile Include="CartItemAdded.aspx.designer.cs">
       <DependentUpon>CartItemAdded.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ClsDataLayer.cs" />
-    <Compile Include="CustomerStartNewOrder.aspx.cs">
-      <DependentUpon>CustomerStartNewOrder.aspx</DependentUpon>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerStartNewOrder.aspx.designer.cs">
-      <DependentUpon>CustomerStartNewOrder.aspx</DependentUpon>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClsDataLayer.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -316,6 +319,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EditCatalog.aspx.cs">
+      <DependentUpon>EditCatalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCatalog.aspx.designer.cs">
+      <DependentUpon>EditCatalog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeEditCustomerInformation.aspx.cs">
       <DependentUpon>EmployeeEditCustomerInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,9 +337,6 @@
       <DependentUpon>EmployeeReviewOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EmployeeReviewOrder.aspx.designer.cs">
-      <DependentUpon>EmployeeReviewOrder.aspx</DependentUpon>
-    </Compile>
     <Compile Include="frmCustomerInformationEdit.aspx.cs">
       <DependentUpon>frmCustomerInformationEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -340,7 +347,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="OrderSubmitted.aspx.cs">
+      <DependentUpon>OrderSubmitted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderSubmitted.aspx.designer.cs">
+      <DependentUpon>OrderSubmitted.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualityAssurance.aspx.cs">
+      <DependentUpon>QualityAssurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QualityAssurance.aspx.designer.cs">
+      <DependentUpon>QualityAssurance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ShoppingCart.aspx.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

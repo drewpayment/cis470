@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace WSC
 {
-    public partial class ShoppingCart : System.Web.UI.Page
+    public partial class EditCatalog : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Checkout_Click(object sender, EventArgs e)
         {
 
         }

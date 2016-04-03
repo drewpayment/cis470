@@ -17,11 +17,11 @@ namespace WSC
                 dsCustomer myDataSet = new dsCustomer();
                 string strSearch = Request["txtSearch"];
                 //Fill the dataset with what is returned from the method.
-                myDataSet = ClsDataLayer.GetCustomer(Server.MapPath("wscompanyConnectionString"), strSearch);
+                //myDataSet = ClsDataLayer.GetCustomer(Server.MapPath("wscompanyConnectionString"), strSearch);
                 //Set the DataGrid to the DataSource based on the table
-                GridViewEmployeeEdit.DataSource = myDataSet.Tables["customer"];
+                //GridViewEmployeeEdit.DataSource = myDataSet.Tables["customer"];
                 //Bind the DataGrid
-                GridViewEmployeeEdit.DataBind();
+                //GridViewEmployeeEdit.DataBind();
             }
         }
     }
