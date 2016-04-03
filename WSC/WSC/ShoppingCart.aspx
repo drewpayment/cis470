@@ -84,8 +84,8 @@
             <br />            
             <br />
             <br /> 
-           <asp:Button ID="CancelButton" runat="server" Text="Cancel Order" style="float:left;"/>
-           <asp:Button ID="Checkout" runat="server" Text="Checkout" style="float:right;"/>                    
+           <asp:Button ID="CancelButton" runat="server" Text="Cancel Order" style="float:left;" PostBackUrl="~/Catalog.aspx"/>
+           <asp:Button ID="Checkout" runat="server" Text="Checkout" style="float:right;" OnClick="Checkout_Click" PostBackUrl="~/Checkout.aspx"/>                    
         </div>          
    </section>
 </asp:Content>

@@ -132,6 +132,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="CartItemAdded.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -213,6 +214,7 @@
     <Content Include="Images\shirt.png" />
     <Content Include="Images\trophies.jpg" />
     <Content Include="Images\trophy.jpg" />
+    <Content Include="OrderSubmitted.aspx" />
     <Content Include="packages.config" />
     <Content Include="Catalog.aspx" />
     <Content Include="dsCustomer.xsc">
@@ -297,6 +299,13 @@
     <Compile Include="CartItemAdded.aspx.designer.cs">
       <DependentUpon>CartItemAdded.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClsDataLayer.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -326,6 +335,7 @@
     </Compile>
     <Compile Include="EmployeeReviewOrder.aspx.cs">
       <DependentUpon>EmployeeReviewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmCustomerInformationEdit.aspx.cs">
       <DependentUpon>frmCustomerInformationEdit.aspx</DependentUpon>
@@ -336,6 +346,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSubmitted.aspx.cs">
+      <DependentUpon>OrderSubmitted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderSubmitted.aspx.designer.cs">
+      <DependentUpon>OrderSubmitted.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QualityAssurance.aspx.cs">
