@@ -13,16 +13,34 @@ namespace WSC {
     public partial class EmployeeEditCustomerInformation {
         
         /// <summary>
-        /// form1 control.
+        /// lblSearchLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblSearchLastName;
         
         /// <summary>
-        /// GridView1 control.
+        /// txtCustLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCustLastName;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
+        
+        /// <summary>
+        /// GridViewEmployeeEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
