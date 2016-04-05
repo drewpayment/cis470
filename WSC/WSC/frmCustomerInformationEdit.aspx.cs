@@ -27,6 +27,16 @@ namespace WSC
                 GridViewCustomerInformation.DataSource = dsCustomer;
                 GridViewCustomerInformation.DataBind();
                 conn.Close();
+
+                conn.Open();
+                MySqlCommand strCmd = new MySqlCommand("Select * from cust_order WHERE custID = @custID", conn);
+                MySqlDataAdapter adapt = new MySqlDataAdapter(strCmd);
+                DataSet dsOrderHistory = new DataSet();
+                adapt.Fill(dsOrderHistory);
+                GridViewOrderHistory.DataSource = dsOrderHistory;
+                GridViewOrderHistory.DataBind();
+                conn.Close();
+
               
             
         }
