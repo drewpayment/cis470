@@ -29,7 +29,7 @@ namespace WSC
                 conn.Close();
 
                 conn.Open();
-                MySqlCommand strCmd = new MySqlCommand("Select * from cust_order WHERE custID = @custID", conn);
+                MySqlCommand strCmd = new MySqlCommand("Select * from cust_order WHERE custID = @custID AND orderStatus = 'completed'", conn);
                 MySqlDataAdapter adapt = new MySqlDataAdapter(strCmd);
                 DataSet dsOrderHistory = new DataSet();
                 adapt.Fill(dsOrderHistory);

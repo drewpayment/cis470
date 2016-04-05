@@ -231,6 +231,17 @@
     <Content Include="dsOrderHistory.xsc">
       <DependentUpon>dsOrderHistory.xsd</DependentUpon>
     </Content>
+    <Content Include="dsCustomerOrder.xsc">
+      <DependentUpon>dsCustomerOrder.xsd</DependentUpon>
+    </Content>
+    <None Include="dsCustomerOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomerOrder.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsCustomerOrder.xss">
+      <DependentUpon>dsCustomerOrder.xsd</DependentUpon>
+    </Content>
     <None Include="dsOrderHistory.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -329,6 +340,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCustomerOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomerOrder.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsOrderHistory.Designer.cs">
       <AutoGen>True</AutoGen>

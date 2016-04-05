@@ -7,7 +7,7 @@
     <section id="reviewCustomerOrder">
    
     <div>   
-        <asp:GridView ID="GridViewReviewCustOrders" runat="server">
+        <asp:GridView ID="GridViewReviewOrders" runat="server">
         </asp:GridView>
         <br />
         <br />
