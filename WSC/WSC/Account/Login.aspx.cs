@@ -24,31 +24,32 @@ namespace WSC.Account
             }
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ToString();
             MySqlConnection mysql = new MySqlConnection(connectionString);
             MySqlDataAdapter adapter;
             DataTable table = new DataTable();
-            String username;
-            String password;
-            username = LoginForm.UserName.ToString();
-            password = LoginForm.Password.ToString();
 
-            adapter = new MySqlDataAdapter("SELECT * FROM user_access WHERE userName = '" + username + "' and password = '" + password + "'", mysql);
+            adapter = new MySqlDataAdapter("SELECT * FROM user_access WHERE userName = '" + UserName + "' and password = '" + Password + "'", mysql);
             adapter.Fill(table);
 
             if (table.Rows.Count <= 0)
             {
-                string script = "alert(\"Incorrect username and password. Please try again.\");";
-                ScriptManager.RegisterStartupScript(this, GetType(),
-                                "ServerControlScript", script, true);
+                return false;
             }
             else
             {
-                Membership.CreateUser(username, password); // This doesn't store user's logon. IDK what I'm doing... lol
-                Response.Redirect("~/Default.aspx");
+                return true;
             }
+        }
+
+        protected void OnAuthenticate(object sender, AuthenticateEventArgs e)
+        {
+            bool Authenticated = false;
+            Authenticated = SiteSpecificAuthenticationMethod(LoginForm.UserName, LoginForm.Password);
+
+            e.Authenticated = Authenticated;
         }
     }
 }
