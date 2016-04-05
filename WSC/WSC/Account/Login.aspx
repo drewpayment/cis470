@@ -2,7 +2,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <section id="loginForm">
-         <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
+         <asp:Login ID="LoginForm" runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
             <LayoutTemplate>
                 <table cellpadding="1" cellspacing="0">
                     <tr>
@@ -41,7 +41,7 @@
                                 </tr>
                                 <tr>
                                     <td align="right" colspan="2">
-                                        <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="ctl05" />
+                                        <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="ctl05" OnClick="LoginButton_Click" />
                                     </td>
                                 </tr>
                             </table>
