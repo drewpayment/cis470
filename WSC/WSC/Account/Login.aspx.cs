@@ -34,12 +34,16 @@ namespace WSC.Account
             adapter = new MySqlDataAdapter("SELECT * FROM user_access WHERE userName = '" + UserName + "' and password = '" + Password + "'", mysql);
             adapter.Fill(table);
 
+            DataRow[] foundRow = table.Select("userName = '" + UserName + "'");
+
             if (table.Rows.Count <= 0)
             {
                 return false;
             }
             else
             {
+                string userType = foundRow[0][4].ToString();
+                Session["userType"] = userType;
                 return true;
             }
         }
