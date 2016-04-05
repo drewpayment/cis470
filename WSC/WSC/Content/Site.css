@@ -36,7 +36,6 @@ header, footer, hgroup,
 nav, section {
     display: block;
     height: 36px;
-    margin-left: 40px;
 }
 
 mark {
@@ -412,7 +411,7 @@ fieldset {
         background: #fff;
         color: #333;
         font-size: 1.2em;
-        margin: 7px 0 6px 0;
+        margin: 5px 0 6px 0;
         padding: 5px;
         }
 
