@@ -34,7 +34,7 @@ namespace WSC.Account
             adapter = new MySqlDataAdapter("SELECT * FROM user_access WHERE userName = '" + UserName + "' and password = '" + Password + "'", mysql);
             adapter.Fill(table);
 
-            DataRow[] foundRow = table.Select("userName = '" + UserName + "'");
+            List<DataRow> foundRow = table.Select("userName = '" + UserName + "'").ToList();
 
             if (table.Rows.Count <= 0)
             {
@@ -42,8 +42,9 @@ namespace WSC.Account
             }
             else
             {
-                string userType = foundRow[0][4].ToString();
-                Session["userType"] = userType;
+                string userType = foundRow[0]["userType"].ToString();
+                Response.Cookies["UserInfo"]["userType"] = userType;
+
                 return true;
             }
         }

@@ -90,6 +90,15 @@
                         </tr>
                         <tr>
                             <td align="right">
+                                <asp:Label ID="StateLabel" runat="server" AssociatedControlID="State">State:</asp:Label>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="State" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="StateRequired" runat="server" ControlToValidate="State" ErrorMessage="State is required." ToolTip="State is required." ValidationGroup="RegisterUser">*</asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
                                 <asp:Label ID="ZipLabel" runat="server" AssociatedControlID="Zip">Zip:</asp:Label>
                             </td>
                             <td>
