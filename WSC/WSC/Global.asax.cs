@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using WSC;
 
+
 namespace WSC
 {
     public class Global : HttpApplication
@@ -17,6 +18,7 @@ namespace WSC
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
         }
 
         void Application_End(object sender, EventArgs e)
@@ -30,5 +32,6 @@ namespace WSC
             // Code that runs when an unhandled error occurs
 
         }
+        
     }
 }

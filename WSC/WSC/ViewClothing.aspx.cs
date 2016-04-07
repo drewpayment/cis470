@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace WSC
 {
 	public partial class ViewClothing : System.Web.UI.Page
@@ -13,5 +14,10 @@ namespace WSC
 		{
 
 		}
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+          
+        }
 	}
 }

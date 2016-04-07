@@ -31,13 +31,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblEditItemName;
         
         /// <summary>
-        /// txtEditItemName control.
+        /// txtEditItemID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEditItemName;
+        protected global::System.Web.UI.WebControls.TextBox txtEditItemID;
         
         /// <summary>
         /// lblEditItemType control.
@@ -49,13 +49,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblEditItemType;
         
         /// <summary>
-        /// rblItemType control.
+        /// txtEditItemType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblItemType;
+        protected global::System.Web.UI.WebControls.TextBox txtEditItemType;
         
         /// <summary>
         /// lblEditPrice control.
@@ -103,13 +103,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// EditCatalogPanel control.
+        /// MediaGridPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel EditCatalogPanel;
+        protected global::System.Web.UI.WebControls.Panel MediaGridPanel;
         
         /// <summary>
         /// GridView1 control.
@@ -119,5 +119,14 @@ namespace WSC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

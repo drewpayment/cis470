@@ -2,6 +2,7 @@
 
 
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
+    <asp:ScriptManager ID="AddToCartScriptManager1" runat="server" />
     <hgroup class="title">
       <h2>View Clothing Item</h2>
     </hgroup>
@@ -15,18 +16,21 @@
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/shirt.png" />    
         </div>
         <div style="float:left; width: 550px;">
-
+           
             <span class="auto-style1">Clothing Item Name (Shirt)<br />
-            Item Description (100% Cotton Brand XYZ)<br />
+            Item Description (100% Cotton, Brand XYZ)<br />
             Color (White)<br />
             Size (Large)<br />
             Item Price ($15.00)<br />
             </span>
             <br />
             <br />
-
+        
         </div>
-        <asp:Button ID="Button1" runat="server" Text="Add to Cart" PostBackUrl="~/CartItemAdded.aspx" />
+
+
+       
+        <asp:Button ID="Button1" runat="server" Text="Add to Cart" PostBackUrl="~/CartItemAdded.aspx" OnClick="Button1_Click" />
    </section>
 </asp:Content>
 <asp:Content runat="server" contentplaceholderid="HeadContent">

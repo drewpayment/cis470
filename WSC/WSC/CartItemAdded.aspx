@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" PostBackUrl="~/Catalog.aspx" Text="Continue Shopping" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" PostBackUrl="~/ShoppingCart.aspx" Text="Go to Shopping Cart" />
+        <asp:Button ID="Button2" runat="server" PostBackUrl="~/ShoppingCart.aspx" Text="Go to Shopping Cart" OnClick="Button2_Click" />
     
     </div>
    </section>

@@ -13,8 +13,7 @@
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ViewClothing.aspx">View Item Details</asp:HyperLink>
                 </p>              
                 <p>
-                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/CartItemAdded.aspx">Add to Shopping Cart</asp:HyperLink>
-                </p>
+                    $15.00</p>
             </asp:Panel>        
             <asp:Panel ID="Panel2" runat="server" style="float:left;" BorderStyle="None"  Width="320px">
                 <p class="auto-style1"><strong>&nbsp;&nbsp;&nbsp;&nbsp; Plaques</strong></p>
@@ -23,8 +22,7 @@
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ViewPlaques.aspx">View Item Details</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/CartItemAdded.aspx">Add to Shopping Cart</asp:HyperLink>
-                </p>
+                    $35.00</p>
             </asp:Panel>        
             <asp:Panel ID="Panel3" runat="server" style="float:left;" BorderStyle="None" Width="320px">
                 <p class="auto-style1"><strong>&nbsp;&nbsp;&nbsp; Trophies</strong></p>
@@ -33,8 +31,7 @@
                     <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ViewTrophies.aspx">View Item Details</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/CartItemAdded.aspx">Add to Shopping Cart</asp:HyperLink>
-                </p>
+                    $25.00</p>
             </asp:Panel>       
       
     </section>
