@@ -43,7 +43,9 @@ namespace WSC.Account
             else
             {
                 string userType = foundRow[0]["userType"].ToString();
+                string userId = foundRow[0]["userId"].ToString();
                 Response.Cookies["UserInfo"]["userType"] = userType;
+                Response.Cookies["UserInfo"]["userId"] = userId;
 
                 return true;
             }

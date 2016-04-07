@@ -6,6 +6,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Membership.OpenAuth;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace WSC.Account
 {
@@ -29,18 +31,91 @@ namespace WSC.Account
             TextBox StateTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("State");
             TextBox ZipTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Zip");
             TextBox PhoneTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Phone");
-            
-            MembershipUser user = Membership.GetUser(UserNameTextBox.Text);
-            Membership.UpdateUser(user);
-            
-            FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
 
-            string continueUrl = RegisterUser.ContinueDestinationPageUrl;
-            if (!OpenAuth.IsLocalUrl(continueUrl))
+            string userName = UserNameTextBox.Text;
+            string passWord = PasswordTextBox.Text;
+            string confirmPw = ConfirmPwTextBox.Text;
+            string email = EmailTextBox.Text;
+            string firstName = FirstNameTextBox.Text;
+            string lastName = LastNameTextBox.Text;
+            string address = AddressTextBox.Text;
+            string city = CityTextBox.Text;
+            string state = StateTextBox.Text;
+            string zip = ZipTextBox.Text;
+            string phone = PhoneTextBox.Text;
+            string userType = "cust";
+
+            string connectString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
+            MySqlConnection conn = new MySqlConnection(connectString);
+            MySqlCommand command, submitUser;
+            conn.Open();
+
+            if (passWord == confirmPw)
             {
-                continueUrl = "~/";
+                try
+                {
+                    command = conn.CreateCommand();
+                    command.CommandText = "SELECT userName FROM user_access";
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        foreach (string value in reader)
+                        {
+                            if (value == userName)
+                            {
+                                Response.Write("<script>alert('I'm sorry, but that username has already been used.');</script>");
+                                Response.Redirect("~/Account/Register");
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    submitUser = conn.CreateCommand();
+                                    submitUser.CommandText = "INSERT INTO user_access (userName, password, userType)" +
+                                        "VALUES (@userName, @password, @userType)";
+                                    submitUser.Parameters.AddWithValue("@userName", userName);
+                                    submitUser.Parameters.AddWithValue("@password", passWord);
+                                    submitUser.Parameters.AddWithValue("@userType", userType);
+                                    submitUser.ExecuteNonQuery();
+
+                                    FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
+
+                                    string continueUrl = RegisterUser.ContinueDestinationPageUrl;
+                                    if (!OpenAuth.IsLocalUrl(continueUrl))
+                                    {
+                                        continueUrl = "~/";
+                                    }
+                                    Response.Redirect(continueUrl);
+                                }
+                                catch (Exception)
+                                {
+                                    throw;
+                                }
+                                finally
+                                {
+                                    conn.Close();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                
             }
-            Response.Redirect(continueUrl);
+            ClearInputs(Page.Controls);
+
+        }
+        private void ClearInputs(ControlCollection ctrls)
+        {
+            foreach (Control ctrl in ctrls)
+            {
+                if (ctrl is TextBox)
+                    ((TextBox)ctrl).Text = string.Empty;
+                ClearInputs(ctrl.Controls);
+            }
         }
     }
 }
