@@ -69,5 +69,37 @@ namespace WSC
         {
 
         }
+
+        protected bool Get_UserType(string userTypeInput)
+        {
+            if (Request.Cookies["UserInfo"] != null)
+            {
+                string userType;
+                if (Request.Cookies["UserInfo"]["userType"] != null)
+                {
+                    userType = Request.Cookies["UserInfo"]["userType"];
+                    if(userType == userTypeInput)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('None of your cookies match... this isn't real. You broke me.');</script>");
+                        return false;
+                    }
+                } 
+                else
+                {
+                    Response.Write("<script>alert('The usertype is invalid. Please contact your system administrator.');</script>");
+                    return false;
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('There isn't a cookie!');</script>");
+                return false;
+            }
+
+        }
     }
 }

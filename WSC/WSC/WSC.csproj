@@ -229,6 +229,28 @@
     <Content Include="dsCustomer.xss">
       <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Content>
+    <Content Include="dsOrderHistory.xsc">
+      <DependentUpon>dsOrderHistory.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsCustomerOrder.xsc">
+      <DependentUpon>dsCustomerOrder.xsd</DependentUpon>
+    </Content>
+    <None Include="dsCustomerOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomerOrder.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsCustomerOrder.xss">
+      <DependentUpon>dsCustomerOrder.xsd</DependentUpon>
+    </Content>
+    <None Include="dsOrderHistory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOrderHistory.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsOrderHistory.xss">
+      <DependentUpon>dsOrderHistory.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="QualityAssurance.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -320,6 +342,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCustomerOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomerOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsOrderHistory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOrderHistory.xsd</DependentUpon>
     </Compile>
     <Compile Include="EditCatalog.aspx.cs">
       <DependentUpon>EditCatalog.aspx</DependentUpon>

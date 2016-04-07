@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,20 +12,36 @@ namespace WSC
 {
     public partial class frmCustomerInformationEdit : System.Web.UI.Page
     {
+        MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString);
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                //Declare the Dataset
-                dsCustomer myDataSet = new dsCustomer();
-                string strSearch = Request["txtSearch"];
-                //Fill the dataset with what is returned from the method.
-                //myDataSet = ClsDataLayer.GetCustomer(Server.MapPath("wscompanyConnectionString"), strSearch);
-                //Set the DataGrid to the DataSource based on the table
-                GridViewCustomerInformation.DataSource = myDataSet.Tables["customer"];
-                //Bind the DataGrid
+             
+                if (!Page.IsPostBack)
+          {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("Select * from customer WHERE custID = @custID", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                DataSet dsCustomer = new DataSet();
+                adp.Fill(dsCustomer);
+                GridViewCustomerInformation.DataSource = dsCustomer;
                 GridViewCustomerInformation.DataBind();
-            }
+                conn.Close();
+
+                conn.Open();
+                MySqlCommand strCmd = new MySqlCommand("Select * from cust_order WHERE custID = @custID AND orderStatus = 'completed'", conn);
+                MySqlDataAdapter adapt = new MySqlDataAdapter(strCmd);
+                DataSet dsOrderHistory = new DataSet();
+                adapt.Fill(dsOrderHistory);
+                GridViewOrderHistory.DataSource = dsOrderHistory;
+                GridViewOrderHistory.DataBind();
+                conn.Close();
+
+              
+            
         }
-    }
-}
+
+                }
+            }
+            
+        }

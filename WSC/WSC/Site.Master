@@ -48,8 +48,9 @@
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" >
                 <ul id="menu">
-                    <li><a runat="server" href="~/">Home</a></li>
+                    <li><a runat="server" href="Default.aspx">Home</a></li>
                     <li><a runat="server" href="Catalog.aspx">Catalog</a></li>
+
                     <li><a runat="server" href="frmCustomerInformationEdit.aspx">Customer Info</a></li>
                     <li><a runat="server" href="EmployeeEditCustomerInformation.aspx">Edit Customer Info</a></li>
                     <li><a runat="server" href="EditCatalog.aspx">Edit Catalog</a></li>
@@ -57,6 +58,24 @@
                     <li><a runat="server" href="EmployeeReviewOrder.aspx">Orders</a></li>
                     <li><a runat="server" href="Checkout.aspx">Checkout</a></li>
                     <li><a runat="server" href="ShoppingCart.aspx">Shopping Cart</a></li>
+
+                    <% if (Request.IsAuthenticated) { %>
+                        <% if (Get_UserType("cust")) { %>
+                            <li><a runat="server" href="frmCustomerInformationEdit.aspx">Customer Information</a></li>
+                        <% } %>
+                    <% } %>
+                    <% if (Request.IsAuthenticated) { %>
+                        <% if (Get_UserType("emp")) { %>
+                            <li><a runat="server" href="EmployeeEditCustomerInformation.aspx">Edit Customer Information</a></li>
+                            <li><a runat="server" href="EditCatalog.aspx">Edit Catalog</a></li>
+                            <li><a runat="server" href="QualityAssurance.aspx">QA</a></li>
+                            <li><a runat="server" href="EmployeeReviewOrder.aspx">Review Orders</a></li>
+                        <% } %>
+                    <% } %>
+                    <% if (Request.IsAuthenticated) { %>
+                        <li><a runat="server" href="Checkout.aspx">Checkout</a></li>
+                    <% } %>
+
                 </ul>
             </asp:ContentPlaceHolder>
             <br />

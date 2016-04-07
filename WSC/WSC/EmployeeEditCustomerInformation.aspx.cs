@@ -15,8 +15,8 @@ namespace WSC
             if (!Page.IsPostBack)
             {
                 //Declare the Dataset
-                dsCustomer myDataSet = new dsCustomer();
-                string strSearch = Request["txtSearch"];
+               // dsCustomer myDataSet = new dsCustomer();
+                //string strSearch = Request["txtSearch"];
                 //Fill the dataset with what is returned from the method.
                 //myDataSet = ClsDataLayer.GetCustomer(Server.MapPath("wscompanyConnectionString"), strSearch);
                 //Set the DataGrid to the DataSource based on the table
