@@ -79,7 +79,7 @@
                 </ul>
             </asp:ContentPlaceHolder>
             <br />
-            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />           
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent"/>           
          </section>              
     </div>
     <div id="footer">                     
