@@ -30,7 +30,7 @@
 
 
        
-        <asp:Button ID="Button1" runat="server" Text="Add to Cart" PostBackUrl="~/CartItemAdded.aspx" OnClick="Button1_Click" />
+        <asp:Button ID="btnAddCartCloth" runat="server" Text="Add to Cart" PostBackUrl="~/CartItemAdded.aspx" OnClick="Button1_Click" />
    </section>
 </asp:Content>
 <asp:Content runat="server" contentplaceholderid="HeadContent">

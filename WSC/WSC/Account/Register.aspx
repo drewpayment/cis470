@@ -4,7 +4,7 @@
     <hgroup class="title">
        <h2>Register to create a new account</h2>
     </hgroup>
-    <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser" style="text-align: left; float: left; z-index: 1; left: auto; top: 181px; position: relative; height: 792px; width: 1091px;">
+    <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser" style="text-align: center; float: left; z-index: 1; left: auto; top: 181px; position: relative; height: 792px; width: 1091px;">
         <LayoutTemplate>
             <asp:PlaceHolder runat="server" ID="wizardStepPlaceholder" />
             <asp:PlaceHolder runat="server" ID="navigationPlaceholder" />
@@ -14,10 +14,10 @@
                 <ContentTemplate>
                     <table>
                         <tr>
-                            <td align="center" colspan="2">Please enter your information</td>
+                            <td colspan="2">Please enter your information</td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
                             </td>
                             <td>
@@ -26,7 +26,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
                             </td>
                             <td>
@@ -35,7 +35,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="ConfirmPasswordLabel" runat="server" AssociatedControlID="ConfirmPassword">Confirm Password:</asp:Label>
                             </td>
                             <td>
@@ -44,7 +44,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail:</asp:Label>
                             </td>
                             <td>
@@ -53,7 +53,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="FirstNameLabel" runat="server" AssociatedControlID="FirstName">First Name:</asp:Label>
                             </td>
                             <td>
@@ -62,7 +62,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="LastNameLabel" runat="server" AssociatedControlID="LastName">Last Name:</asp:Label>
                             </td>
                             <td>
@@ -71,7 +71,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="AddressLabel" runat="server" AssociatedControlID="Address">Address:</asp:Label>
                             </td>
                             <td>
@@ -80,7 +80,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td >
                                 <asp:Label ID="CityLabel" runat="server" AssociatedControlID="City">City:</asp:Label>
                             </td>
                             <td>
@@ -89,7 +89,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td>
                                 <asp:Label ID="StateLabel" runat="server" AssociatedControlID="State">State:</asp:Label>
                             </td>
                             <td>
@@ -98,7 +98,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td>
                                 <asp:Label ID="ZipLabel" runat="server" AssociatedControlID="Zip">Zip:</asp:Label>
                             </td>
                             <td>
@@ -107,7 +107,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="right">
+                            <td>
                                 <asp:Label ID="PhoneLabel" runat="server" AssociatedControlID="Phone">Phone:</asp:Label>
                             </td>
                             <td>
@@ -116,12 +116,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" colspan="2">
+                            <td colspan="2">
                                 <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="RegisterUser"></asp:CompareValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" colspan="2" style="color:Red;">
+                            <td colspan="2" style="color:Red;">
                                 <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False"></asp:Literal>
                             </td>
                         </tr>
@@ -135,13 +135,13 @@
     <ContentTemplate>
         <table>
             <tr>
-                <td align="left" colspan="2">Complete</td>
+                <td colspan="2">Complete</td>
             </tr>
             <tr>
                 <td>Your account has been successfully created.</td>
             </tr>
             <tr>
-                <td align="left" colspan="2">
+                <td colspan="2">
                     <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Continue" ValidationGroup="RegisterUser" />
                 </td>
             </tr>

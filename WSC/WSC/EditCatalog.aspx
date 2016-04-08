@@ -27,7 +27,7 @@
             <asp:Button ID="Button1" runat="server" Text="Add Media Item" OnClick="Button1_Click" />
         </asp:Panel>        
     </div>
-    <asp:Panel ID="MediaGridPanel" runat="server">
+    <asp:Panel ID="MediaGridPanel" runat="server" style="float:right;">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="mediaID" DataSourceID="SqlDataSource1" GridLines="None">
             <Columns>
                 <asp:BoundField DataField="mediaID" HeaderText="mediaID" ReadOnly="True" SortExpression="mediaID" />
@@ -48,7 +48,11 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#33276A" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:wscompanyConnectionString %>" ProviderName="<%$ ConnectionStrings:wscompanyConnectionString.ProviderName %>" SelectCommand="SELECT * FROM catalog"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:wscompanyConnectionString %>" ProviderName="<%$ ConnectionStrings:wscompanyConnectionString.ProviderName %>"
+             SelectCommand="SELECT * FROM catalog"
+             UpdateCommand="UPDATE catalog SET mediaType = @mediaType, price = @price, qtyAvailable = @qtyAvailable WHERE mediaID = @mediaID"
+             DeleteCommand="DELETE FROM catalog WHERE mediaID = @mediaID"> 
+        </asp:SqlDataSource>
    </asp:Panel>
     </section>
 </asp:Content>

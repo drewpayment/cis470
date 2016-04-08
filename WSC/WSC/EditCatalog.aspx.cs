@@ -28,8 +28,7 @@ namespace WSC
             string myMediaType = txtEditItemType.Text;
             decimal myPrice = Convert.ToDecimal(txtEditPrice.Text);
             int myQuantity = Convert.ToInt16(txtQty.Text);
-            Console.WriteLine(myMediaID + myMediaType + myPrice + myQuantity);
-
+           
             //connection string 
             string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
             MySqlConnection myConn = new MySqlConnection(myConnection);
@@ -57,8 +56,9 @@ namespace WSC
                     myConn.Close();
                 }
             }
+            GridView1.DataBind();
             ClearInputs(Page.Controls);
-
+            
         }
         void ClearInputs(ControlCollection ctrls)
         {
@@ -72,7 +72,71 @@ namespace WSC
 
        
 
-        
+        //Get row to be updated
+       
+        protected void OnRowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridView1.EditIndex = e.NewEditIndex;
+            GridView1.DataBind();
+        }
+        protected void OnRowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = GridView1.Rows[e.RowIndex];
+            string mediaID = (row.FindControl("mediaID") as TextBox).Text;
+            string mediaType = (row.FindControl("mediaType") as TextBox).Text;
+            decimal price = Convert.ToDecimal((row.FindControl("price") as TextBox).Text);
+            int qtyAvailable = Convert.ToInt16((row.FindControl("qtyAvailable") as TextBox).Text);
+            string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
+            using (MySqlConnection myConn = new MySqlConnection(myConnection)) 
+            {
+                using (MySqlCommand myCommand = new MySqlCommand("UPDATE catalog SET mediaType = @mediaType, price = @price, qtyAvailable = @qtyAvailable WHERE mediaID = @mediaID"))
+                {
+                    using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                    {
+                        myCommand.Parameters.AddWithValue("@MediaID", mediaID);
+                        myCommand.Parameters.AddWithValue("@MediaType", mediaType);
+                        myCommand.Parameters.AddWithValue("@price", price);
+                        myCommand.Parameters.AddWithValue("@qtyAvailable", qtyAvailable);
+                        myCommand.Connection = myConn;
+                        myConn.Open();
+                        myCommand.ExecuteNonQuery();
+                        myConn.Close();
+                    }
+                }
+            }
+            //reset edit index on cancel 
+            GridView1.EditIndex = -1;
+            GridView1.DataBind();
+        }
+
+        protected void OnRowCancelingEdit(object sender, EventArgs e)
+        {
+            //reset edit index on cancel 
+            GridView1.EditIndex = -1;
+            GridView1.DataBind();
+        }
+
+        protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string mediaID = Convert.ToString(GridView1.DataKeys[e.RowIndex].Values[0]);
+            string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
+            using (MySqlConnection myConn = new MySqlConnection(myConnection)) 
+            {
+
+                using (MySqlCommand myCommand = new MySqlCommand("DELETE FROM catalog WHERE mediaID = @mediaID"))
+                {
+                    using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                    {
+                        myCommand.Parameters.AddWithValue("@mediaID", mediaID);
+                        myCommand.Connection = myConn;
+                        myConn.Open();
+                        myCommand.ExecuteNonQuery();
+                        myConn.Close();
+                    }
+                }
+            }
+            GridView1.DataBind();
+        }
     }
 }
        

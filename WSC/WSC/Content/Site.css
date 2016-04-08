@@ -182,7 +182,7 @@ footer {
 ul#menu {
     font-size: 1.3em;
     font-weight: 600;
-    margin: 0 0 5px;
+    margin: 0 0 0;
     padding: 0;
     text-align: right;
 }
@@ -220,7 +220,7 @@ ul#menu {
         background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         color: #3e5667;
-        padding: 20px 40px 30px 40px;
+        padding: 10px 10px 10px 10px;
     }
 
         .featured hgroup.title h1, .featured hgroup.title h2 {
@@ -231,8 +231,8 @@ ul#menu {
             font-size: 1.1em;
         }
 panel {
-   margin-left:25px;
-   margin-right:25px;
+   margin-left:0;
+   margin-right:0;
 }
 
 /* page titles */
@@ -251,7 +251,7 @@ hgroup.title h2 {
 
 /* features */
 section.feature {
-    width: 300px;
+   
     float: left;
     padding: 10px;
 }
@@ -521,6 +521,7 @@ table {
     border-spacing: 0;
     margin-top: 0.75em;
     width: 89px;
+    float: left;
 }
 
 th {
@@ -670,7 +671,7 @@ tr.pager td {
     }
     panel, panel1 {
         float:left;
-        width:250px;
+       
     }
     /* ordered list */
     ol.round {
