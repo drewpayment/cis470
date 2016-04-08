@@ -16,7 +16,7 @@
 &nbsp;<asp:TextBox ID="txtCustLastName" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnSearch" runat="server" Text="Search" />
+        <asp:Button ID="btnSearch" runat="server" Text="Search" PostBackUrl="~/EmployeeEditCustomerInformation.aspx" />
         <br />
     
     </div>

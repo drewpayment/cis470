@@ -13,14 +13,16 @@ namespace WSC
     public partial class frmCustomerInformationEdit : System.Web.UI.Page
     {
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString);
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
              
                 if (!Page.IsPostBack)
           {
+              string accessID= Request.Cookies["UserInfo"]["accessId"];
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("Select * from customer WHERE custID = @custID", conn);
+                MySqlCommand cmd = new MySqlCommand("Select * from customer WHERE custID = @accessID", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                 DataSet dsCustomer = new DataSet();
                 adp.Fill(dsCustomer);
@@ -28,7 +30,7 @@ namespace WSC
                 GridViewCustomerInformation.DataBind();
                 conn.Close();
 
-                conn.Open();
+              /*  conn.Open();
                 MySqlCommand strCmd = new MySqlCommand("Select * from cust_order WHERE custID = @custID AND orderStatus = 'completed'", conn);
                 MySqlDataAdapter adapt = new MySqlDataAdapter(strCmd);
                 DataSet dsOrderHistory = new DataSet();
@@ -36,7 +38,7 @@ namespace WSC
                 GridViewOrderHistory.DataSource = dsOrderHistory;
                 GridViewOrderHistory.DataBind();
                 conn.Close();
-
+                    */
               
             
         }
