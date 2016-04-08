@@ -35,7 +35,7 @@
             <SortedDescendingHeaderStyle BackColor="#33276A" />
         </asp:GridView> 
          <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:wscompanyConnectionString %>" ProviderName="<%$ ConnectionStrings:wscompanyConnectionString.ProviderName %>" 
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:wscompanyConnectionString %>" ProviderName="MySql.Data.MySqlClient" 
             SelectCommand="SELECT * FROM customer"
             UpdateCommand="UPDATE customer SET custID = @custID, custFirstName = @custFirstName,  custLastName = @custLastName, custAddress = @custAddress, custCity = @custCity, custState = @custState, custZip = @custZip, custPhone = @custPhone, custEmail = @custEmail, accessID = @accessID WHERE custID = @custID"
             DeleteCommand="DELETE FROM customer WHERE custID = @custID"></asp:SqlDataSource>
