@@ -10,6 +10,7 @@
         <asp:GridView ID="GridViewReviewOrders" runat="server">
         </asp:GridView>
         <br />
+        Look Up Order by Order ID:
         <br />
         <br />
         <asp:Button ID="btnFinishReview" runat="server" PostBackUrl="~/Account/Login.aspx" Text="Finished Reviewing" />
@@ -19,10 +20,4 @@
    </section>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="HeadContent">
-    <style type="text/css">
-        .auto-style1 {
-            font-size: medium;
-            width: 299px;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>

@@ -522,6 +522,7 @@ table {
     margin-top: 0.75em;
     width: 89px;
     float: left;
+    margin-left: 0px;
 }
 
 th {
