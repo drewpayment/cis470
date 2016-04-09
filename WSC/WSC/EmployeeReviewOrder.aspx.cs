@@ -27,11 +27,11 @@ namespace WSC
             {
                 using (MySqlConnection myConn = new MySqlConnection(myConnection))
                 {
-                    using (MySqlCommand myCommand = new MySqlCommand("SELECT * FROM customer WHERE orderID = @orderID"))
+                    using (MySqlCommand myCommand = new MySqlCommand("SELECT orders.*, purchase_item.* FROM orders JOIN purchase_item WHERE orders.orderID = @orderID AND purchase_item.orderID = @orderID"))
                     {
                         using (MySqlDataAdapter sda = new MySqlDataAdapter())
                         {
-                            myCommand.Parameters.AddWithValue("@custID", orderID);
+                            myCommand.Parameters.AddWithValue("@orderID", orderID);
                             myCommand.Connection = myConn;
                             myConn.Open();
                             sda.SelectCommand = myCommand;
@@ -50,6 +50,11 @@ namespace WSC
             {
                 throw;
             }  
+        }
+
+        protected void GridViewReviewOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
