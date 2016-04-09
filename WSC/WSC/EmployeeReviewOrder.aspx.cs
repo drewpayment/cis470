@@ -15,9 +15,41 @@ namespace WSC
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            
+        { 
+        }
 
+        protected void btnFindOrder_Click(object sender, EventArgs e)
+        {
+            string orderID = txtGetOrder.Text;
+            //connection string             
+            string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
+            try
+            {
+                using (MySqlConnection myConn = new MySqlConnection(myConnection))
+                {
+                    using (MySqlCommand myCommand = new MySqlCommand("SELECT * FROM customer WHERE orderID = @orderID"))
+                    {
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                        {
+                            myCommand.Parameters.AddWithValue("@custID", orderID);
+                            myCommand.Connection = myConn;
+                            myConn.Open();
+                            sda.SelectCommand = myCommand;
+                            using (DataTable dt = new DataTable())
+                            {
+                                sda.Fill(dt);
+                                GridViewReviewOrders.DataSource = dt;
+                                GridViewReviewOrders.DataBind();
+                            }
+                            myConn.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }  
         }
     }
 }

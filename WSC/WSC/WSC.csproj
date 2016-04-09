@@ -371,6 +371,9 @@
       <DependentUpon>EmployeeReviewOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="EmployeeReviewOrder.aspx.designer.cs">
+      <DependentUpon>EmployeeReviewOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmCustomerInformationEdit.aspx.cs">
       <DependentUpon>frmCustomerInformationEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

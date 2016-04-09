@@ -13,31 +13,40 @@ namespace WSC {
     public partial class EmployeeReviewOrder {
         
         /// <summary>
-        /// form1 control.
+        /// reviewCustomerOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl reviewCustomerOrder;
         
         /// <summary>
-        /// LblReviewCustOrder control.
+        /// GridViewReviewOrders control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblReviewCustOrder;
+        protected global::System.Web.UI.WebControls.GridView GridViewReviewOrders;
         
         /// <summary>
-        /// GridViewReviewCustOrders control.
+        /// txtGetOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewReviewCustOrders;
+        protected global::System.Web.UI.WebControls.TextBox txtGetOrder;
+        
+        /// <summary>
+        /// btnFindOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFindOrder;
         
         /// <summary>
         /// btnFinishReview control.
@@ -47,14 +56,5 @@ namespace WSC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFinishReview;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
