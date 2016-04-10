@@ -12,7 +12,7 @@
         <asp:Button ID="btnSubmitName" runat="server" Text="Find Me" OnClick="btnSubmitName_Click" />
   
         <asp:GridView ID="GridViewCustomerInformation" runat="server" AutoGenerateColumns="False" DataKeyNames="custID" OnRowEditing="GridViewCustomerInformation_OnRowEditing" 
-            OnRowCancelingEdit="GridViewCustomerInformation_OnRowCancelingEdit" OnRowUpdating="GridViewCustomerInformation_OnRowUpdating" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            OnRowCancelingEdit="GridViewCustomerInformation_OnRowCancelingEdit" OnRowCommand="OnRowCommand" OnRowUpdating="GridViewCustomerInformation_OnRowUpdating" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
             <Columns>                                
                  <asp:TemplateField HeaderText="First">
                     <EditItemTemplate>
@@ -77,8 +77,9 @@
                     <ItemTemplate>
                        <asp:Label ID="lbl8" runat="server" Text='<%# Eval("custEmail") %>'></asp:Label>
                     </ItemTemplate>                  
-                </asp:TemplateField>                 
-                <asp:CommandField ButtonType= "Link" ShowEditButton="True" />
+                </asp:TemplateField>
+                              
+                <asp:CommandField ButtonType= "Link" ShowEditButton="True"  />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

@@ -57,7 +57,7 @@
                 </table>
             </LayoutTemplate>
         </asp:Login>
-        <p>
+        <p class="auto-style1">
             <asp:HyperLink ID="RegisterHyperLink" runat="server">Register</asp:HyperLink>
             if you don't have an account.
         </p>
@@ -65,5 +65,11 @@
 
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="HeadContent">
+    <style type="text/css">
+        .auto-style1 {
+            text-align: left;
+            float: left;
+        }
+    </style>
     </asp:Content>
 

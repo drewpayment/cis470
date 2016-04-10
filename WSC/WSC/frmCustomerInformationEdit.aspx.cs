@@ -160,14 +160,10 @@ namespace WSC
             }   
         }
 
-        protected void GridViewCustomerInformation_SelectedIndexChanged(object sender, EventArgs e)
+        protected void OnRowCommand(object sender, GridViewCommandEventArgs e)
         {
             GridViewCustomerInformation.DataBind(); 
         }
-
-        protected void btnEdit_Click(object sender, EventArgs e)
-        {
-
-        }       
+              
     }
 }

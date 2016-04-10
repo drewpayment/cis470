@@ -4,11 +4,15 @@
     <hgroup class="title">
        <h2>Register to create a new account</h2>
     </hgroup>
-    <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser" style="text-align: center; float: left; z-index: 1; left: auto; top: 181px; position: relative; height: 792px; width: 1091px;">
+    <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser" style="text-align: right; float: none; z-index: 1; left: auto; top: 181px; position: relative; height: 792px; width: 1091px;" BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em">
+        <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Center" />
         <LayoutTemplate>
             <asp:PlaceHolder runat="server" ID="wizardStepPlaceholder" />
             <asp:PlaceHolder runat="server" ID="navigationPlaceholder" />
         </LayoutTemplate>
+        <ContinueButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
+        <CreateUserButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
+        <TitleTextStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
         <WizardSteps>
             <asp:CreateUserWizardStep runat="server" ID="RegisterUserWizardStep">
                 <ContentTemplate>
@@ -126,6 +130,7 @@
                             </td>
                         </tr>
                     </table>
+                    <br />
                 </ContentTemplate>
                 <CustomNavigationTemplate >
                     <asp:Button alight="left" ID="SubmitButton" runat="server" Text="Submit" />
@@ -149,6 +154,9 @@
     </ContentTemplate>
             </asp:CompleteWizardStep>
         </WizardSteps>
+        <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
+        <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
+        <SideBarStyle BackColor="#5D7B9D" BorderWidth="0px" Font-Size="0.9em" VerticalAlign="Top" />
         <StartNavigationTemplate>
             <asp:Button ID="StartNextButton" runat="server" CommandName="MoveNext" Text="Next" />
         </StartNavigationTemplate>
@@ -156,5 +164,6 @@
             <asp:Button ID="StepPreviousButton" runat="server" CausesValidation="False" CommandName="MovePrevious" Text="Previous" />
             <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="Next" />
         </StepNavigationTemplate>
+        <StepStyle BorderWidth="0px" />
     </asp:CreateUserWizard>
 </asp:Content>
