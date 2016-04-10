@@ -23,6 +23,10 @@
             &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtQASpecialID" runat="server"></asp:TextBox>
         <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Quality Assurance ID: "></asp:Label>
+        <asp:TextBox ID="txtQAID" runat="server"></asp:TextBox>
+        <br />
          <asp:Label ID="lblQANotes" runat="server" Text="Inspection Notes: "></asp:Label>
             &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtQANotes" runat="server"></asp:TextBox>
@@ -30,11 +34,11 @@
         <br />
         <asp:Label ID="lblQAStatus" runat="server" Text="QA Status:" style="text-align: center"></asp:Label>
          <asp:RadioButtonList ID="rblQAStatus" runat="server" RepeatDirection="Horizontal" Width="135px">
-                <asp:ListItem Text="Pass" Value="Pass"/>
-                <asp:ListItem Text="Fail" Value="Fail" />              
+                <asp:ListItem Text="Pass" Value="P"/>
+                <asp:ListItem Text="Fail" Value="F" />              
          </asp:RadioButtonList>
         <br />
-        <asp:Button ID="btnSubmitQA" runat="server" Text="Submit QA" />
+        <asp:Button ID="btnSubmitQA" runat="server" Text="Submit QA" OnClick="btnSubmitQA_Click" />
         <br />
         <br />
 
