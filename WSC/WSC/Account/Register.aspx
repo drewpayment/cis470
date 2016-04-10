@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WSC.Account.Register" %>
 
+<%-- Load registration page --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
        <h2>Register to create a new account</h2>

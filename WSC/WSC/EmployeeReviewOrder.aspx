@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="True" CodeBehind="EmployeeReviewOrder.aspx.cs" Inherits="WSC.EmployeeReviewOrder" %>
 
+<%-- Load employee review order page, allowing them to review placed orders --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Review Customer Orders</h2>

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeEditCustomerInformation.aspx.cs" Inherits="WSC.EmployeeEditCustomerInformation" %>
 
 
-
+<%-- Page for employee to edit customer information --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Edit Customer Information</h2>

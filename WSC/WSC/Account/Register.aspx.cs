@@ -13,11 +13,24 @@ namespace WSC.Account
 {
     public partial class Register : Page
     {
+        /**
+         * Load page and store ContinueDestinationPageUrl
+         * 
+         * @param object, EventArgs
+         * @var string
+         * @return void
+         */
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
         }
 
+        /**
+         * Register user from registration form.
+         * 
+         * @param object, EventArgs
+         * @return void
+         */
         protected void RegisterUser_CreatedUser(object sender, EventArgs e)
         {
             TextBox UserNameTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("UserName");
@@ -108,6 +121,13 @@ namespace WSC.Account
             ClearInputs(Page.Controls);
 
         }
+
+        /**
+         * Clear form inputs after registration
+         * 
+         * @param ControlCollection
+         * @return void
+         */
         private void ClearInputs(ControlCollection ctrls)
         {
             foreach (Control ctrl in ctrls)

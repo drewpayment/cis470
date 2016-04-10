@@ -10,7 +10,12 @@ namespace WSC
 {
     public class ClsDataLayer
     {
-        //Method to get the connectionstring
+        /**
+         * Gets the connection string for database
+         * 
+         * @var string
+         * @return string
+         */
         public static string ConnectionString
         {
             get

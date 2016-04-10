@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Catalog" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Catalog.aspx.cs" Inherits="WSC.Catalog" %>
 
+<%-- Load catalog page and links --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Catalog</h2>

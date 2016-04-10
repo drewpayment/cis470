@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="QualityAssurance.aspx.cs" Inherits="WSC.QualityAssurance" %>
 
+<%-- Quality assurance page that shows orders to be reviewed --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Quality Assurance</h2>

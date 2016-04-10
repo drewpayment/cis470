@@ -17,14 +17,27 @@ namespace WSC
         protected void Page_Load(object sender, EventArgs e)
         {
             
-        }      
-       
+        }
 
+        /**
+         * Bind changes from edit on grid view
+         * 
+         * @param object, GridViewEditEventArgs
+         * @return void
+         */
         protected void OnRowEditing(object sender, GridViewEditEventArgs e)
         {
             GridViewEmployeeEdit.EditIndex = e.NewEditIndex;
             GridViewEmployeeEdit.DataBind();
         }
+
+        /**
+         * Persist changed grid view to database
+         * 
+         * @param object, GridViewUpdateEventArgs
+         * @var string, int, GridViewRow
+         * @return void
+         */
         protected void OnRowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             GridViewRow row = GridViewEmployeeEdit.Rows[e.RowIndex];
@@ -67,6 +80,12 @@ namespace WSC
             GridViewEmployeeEdit.DataBind();
         }
 
+        /**
+         * Can changes to gridview
+         * 
+         * @param object, EventArgs
+         * @return void
+         */
         protected void OnRowCancelingEdit(object sender, EventArgs e)
         {
             //reset edit index on cancel 
@@ -74,6 +93,13 @@ namespace WSC
             GridViewEmployeeEdit.DataBind();
         }
 
+        /**
+         * Delete and persist row from grid view and database
+         * 
+         * @param object, GridViewDeleteEventArgs
+         * @var string
+         * @return void
+         */
         protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string custID = Convert.ToString(GridViewEmployeeEdit.DataKeys[e.RowIndex].Values[0]);

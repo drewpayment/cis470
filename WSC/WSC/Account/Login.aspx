@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WSC.Account.Login" %>
 
+<%-- Login form loaded for employee and customer login through same web form --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
        <h2>Login</h2>

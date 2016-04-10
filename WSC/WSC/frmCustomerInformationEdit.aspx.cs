@@ -15,12 +15,24 @@ namespace WSC
 {
     public partial class frmCustomerInformationEdit : System.Web.UI.Page
     {
+        /**
+         * Set connection string
+         * 
+         * @var string
+         */
         string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
        
         protected void Page_Load(object sender, EventArgs e)
         {           
         }
-       
+
+        /**
+         * Submit changes to customer information button
+         * 
+         * @param object, EventArgs
+         * @var string
+         * @return void
+         */
         protected void btnSubmitName_Click(object sender, EventArgs e)
         {      
            
@@ -56,13 +68,26 @@ namespace WSC
                 throw;
             }                
         }
-                
+
+        /**
+         * Bind gridview changes on edit
+         * 
+         * @param object, GridViewEditEventArgs
+         * @return void
+         */
         protected void GridViewCustomerInformation_OnRowEditing(object sender, GridViewEditEventArgs e)
         {             
             GridViewCustomerInformation.EditIndex = e.NewEditIndex;
             GridViewCustomerInformation.DataBind();            
         }
-        
+
+        /**
+         * Persist changes to database from gridview
+         * 
+         * @param object, GridViewUpdateEventArgs
+         * @var int, TextBox, string
+         * @return void
+         */
         protected void GridViewCustomerInformation_OnRowUpdating(object sender, GridViewUpdateEventArgs e)
         {
            
@@ -116,14 +141,27 @@ namespace WSC
                     }
                 }                         
         }
+
+        /**
+         * Cancel changes to gridview
+         * 
+         * @param object, GridViewCancelEditEventArgs
+         * @return void
+         */
         protected void GridViewCustomerInformation_OnRowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             //reset edit index on cancel 
             GridViewCustomerInformation.EditIndex = -1;
             GridViewCustomerInformation.DataBind(); 
-        }  
-        
-        //grid view for view orders
+        }
+
+        /**
+         * Gridview button event
+         * 
+         * @param object, EventArgs
+         * @var string
+         * @return void
+         */
         protected void btnViewOrders_Click(object sender, EventArgs e)
         {
 
@@ -160,6 +198,12 @@ namespace WSC
             }   
         }
 
+        /**
+         * Save changes to grid view
+         * 
+         * @param object, EventArgs
+         * @return void
+         */
         protected void GridViewCustomerInformation_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewCustomerInformation.DataBind(); 

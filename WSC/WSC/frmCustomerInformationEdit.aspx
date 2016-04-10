@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" EnableEventValidation="true" CodeBehind="frmCustomerInformationEdit.aspx.cs" Inherits="WSC.frmCustomerInformationEdit" %>
 
-
+<%-- User profile page that allows user to edit their information --%>
 <asp:Content  runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Customer Information</h2>

@@ -15,6 +15,12 @@ namespace WSC
 
 		}
 
+        /**
+         * Set session variable for item on button event
+         * 
+         * @param object, EventArgs
+         * @return void
+         */
         protected void Button1_Click(object sender, EventArgs e)
         {
             HttpContext.Current.Session["ItemName1"] = "Clothing";

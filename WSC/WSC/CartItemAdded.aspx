@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CartItemAdded.aspx.cs" Inherits="WSC.CartItemAdded" %>
 
+<%-- Page to confirm that item was added to user's shopping cart --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Item Successfully Added to Cart!</h2>
