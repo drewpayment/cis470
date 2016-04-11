@@ -20,6 +20,13 @@ namespace WSC
 
         }
 
+        /**
+         * Edit catalog submit button
+         * 
+         * @param object, EventArgs
+         * @var string, decimal, int
+         * @return void
+         */
         protected void Button1_Click(object sender, EventArgs e)
         {
 
@@ -72,12 +79,26 @@ namespace WSC
        
 
         //Get row to be updated
-       
+        
+        /**
+         * Bind grid data on editing
+         * 
+         * @param object, GridViewEditEventArgs
+         * @return void
+         */
         protected void OnRowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
             GridView1.DataBind();
         }
+
+        /**
+         * Persist updated gridview to database
+         * 
+         * @param object, GridViewUpdateEventArgs
+         * @var string, decimal, int
+         * @return void
+         */
         protected void OnRowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             GridViewRow row = GridView1.Rows[e.RowIndex];
@@ -108,6 +129,12 @@ namespace WSC
             GridView1.DataBind();
         }
 
+        /**
+         * Cancel edit of gridview
+         * 
+         * @param object, EventArgs
+         * @return void
+         */
         protected void OnRowCancelingEdit(object sender, EventArgs e)
         {
             //reset edit index on cancel 
@@ -115,6 +142,13 @@ namespace WSC
             GridView1.DataBind();
         }
 
+        /**
+         * Delete row from gridview and persist to database
+         * 
+         * @param object, GridViewDeleteEventArgs
+         * @var string
+         * @return void
+         */
         protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string mediaID = Convert.ToString(GridView1.DataKeys[e.RowIndex].Values[0]);

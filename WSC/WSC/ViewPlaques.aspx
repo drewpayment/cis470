@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewPlaques.aspx.cs" Inherits="WSC.ViewPlaques" %>
 
-
+<%-- View plaque details page --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>View Plaque Item</h2>

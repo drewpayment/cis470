@@ -11,14 +11,26 @@ namespace WSC
 {
     public partial class QualityAssurance : System.Web.UI.Page
     {
-      
-       string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
+
+        /**
+          * Set connection string
+          * 
+          * @var string
+          */
+        string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
         
         protected void Page_Load(object sender, EventArgs e)
         {
             
         }
 
+        /**
+         * Quality assurance form button event code
+         * 
+         * @param object, EventArgs
+         * @var string
+         * @return void
+         */
         protected void btnSubmitQA_Click(object sender, EventArgs e)
         {
             string orderID = txtQAOrderID.Text;

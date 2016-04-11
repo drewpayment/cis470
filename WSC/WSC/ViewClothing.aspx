@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewClothing.aspx.cs" Inherits="WSC.ViewClothing" %>
 
-
+<%-- View clothing item details --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <asp:ScriptManager ID="AddToCartScriptManager1" runat="server" />
     <hgroup class="title">

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditCatalog.aspx.cs" Inherits="WSC.EditCatalog" %>
 
+<%-- Edit catalog page enables user to make edits --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Edit Catalog</h2>

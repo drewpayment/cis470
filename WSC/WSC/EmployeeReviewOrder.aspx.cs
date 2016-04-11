@@ -12,12 +12,24 @@ namespace WSC
 {
     public partial class EmployeeReviewOrder : System.Web.UI.Page
     {
+        /**
+         * Set MySql connection string
+         * 
+         * @var MySqlConnection
+         */
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
         { 
         }
 
+        /**
+         * Find order button click event code
+         * 
+         * @param object, EventArgs
+         * @var string
+         * @return void
+         */
         protected void btnFindOrder_Click(object sender, EventArgs e)
         {
             string orderID = txtGetOrder.Text;

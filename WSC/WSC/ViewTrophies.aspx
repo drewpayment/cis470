@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewTrophies.aspx.cs" Inherits="WSC.ViewTrophies" %>
 
-
+<%-- View trophies details page --%>
 <asp:Content runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>View Trophy Item</h2>

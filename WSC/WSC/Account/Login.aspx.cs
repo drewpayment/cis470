@@ -13,6 +13,13 @@ namespace WSC.Account
 {
     public partial class Login : Page
     {
+        /** 
+         * Load page and set ReturnUrl for HttpUtility
+         *
+         * @param object, EventArgs
+         * @var string
+         * @return void
+         */
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
@@ -24,6 +31,13 @@ namespace WSC.Account
             }
         }
 
+        /**
+         * Authenticate user input against MySQL database.
+         * 
+         * @param string, string
+         * @var string
+         * @return boolean
+         */
         private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ToString();
@@ -51,6 +65,13 @@ namespace WSC.Account
             }
         }
 
+        /**
+         * Set authentication token based on user login response.
+         * 
+         * @param object, AuthenticateEventArgs
+         * @var boolean
+         * @return void
+         */
         protected void OnAuthenticate(object sender, AuthenticateEventArgs e)
         {
             bool Authenticated = false;

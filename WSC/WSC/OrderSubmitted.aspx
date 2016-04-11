@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderSubmitted.aspx.cs" Inherits="WSC.OrderSubmitted" %>
 
+<%-- Order submit confirmation page --%>
 <asp:Content  runat="server" ContentPlaceHolderID="FeaturedContent">
     <hgroup class="title">
       <h2>Order Submitted</h2>
