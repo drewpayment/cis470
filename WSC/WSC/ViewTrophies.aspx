@@ -27,7 +27,7 @@
             <br />
 
         </div>
-        <asp:Button ID="Button1" runat="server" Text="Add to Cart" PostBackUrl="~/CartItemAdded.aspx" />
+        <asp:Button ID="Button1" runat="server" Text="Add to Cart" OnClick="Button1_Click" />
    </section>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="HeadContent">

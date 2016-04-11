@@ -13,5 +13,11 @@ namespace WSC
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["CartItem3"] = "Trophy";
+            Response.Redirect("CartItemAdded.aspx");
+        }
     }
 }

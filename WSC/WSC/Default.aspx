@@ -14,7 +14,7 @@
                 <h1>Welcome to Williams Specialty Company</h1>
             </hgroup>
             <p>
-                Williams Specialty Company is small printing and engraving company specailized in serving all of your printing and engraving needs. Shop now and enter your own personalized message or logo for us to masterfully print or engrave onto your purchase selections. Make it your own, today!</p>
+                Williams Specialty Company is small printing and engraving company specialized in serving all of your printing and engraving needs. Shop now and enter your own personalized message or logo for us to masterfully print or engrave onto your purchase selections. Make it your own, today!</p>
             <p>
                 &nbsp;&nbsp;
                 <asp:Button ID="Button1" runat="server" Text="Shop Now" OnClick="Button1_Click" PostBackUrl="~/Catalog.aspx" />

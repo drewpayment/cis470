@@ -129,22 +129,22 @@
              <h4>Payment Information</h4>
              <br />
              <asp:Label ID="lblPayType" runat="server" Text="Payment Type:"></asp:Label>             
-             <asp:ListBox ID="ListBox1" runat="server" Rows="2">
+             &nbsp;
+             <asp:DropDownList ID="DropDownList1" runat="server">
                  <asp:ListItem>Billing</asp:ListItem>
-                 <asp:ListItem Value="Delivery">Pay on Delivery</asp:ListItem>
-             </asp:ListBox>
+                 <asp:ListItem>Pay at Delivery</asp:ListItem>
+             </asp:DropDownList>
              <br />
              <asp:Label ID="lblCCNum" runat="server" Text="Credit Card Number"></asp:Label>
              <asp:TextBox ID="txtCCNum" runat="server"></asp:TextBox>
-
              <br />
              <asp:Label ID="lblCCExpDate" runat="server" Text="Exp Date:"></asp:Label>
              <asp:TextBox ID="txtCCExpDate" runat="server"></asp:TextBox>
              <br />
              <br />
-             <asp:Button ID="Button1" runat="server" PostBackUrl="~/ShoppingCart.aspx" Text="Cancel" />
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
-             <asp:Button ID="SubmitOrderBtn" runat="server" Text="Submit Order" PostBackUrl="~/OrderSubmitted.aspx"/>
+             <asp:Button ID="Button1" runat="server" Text="Cancel" PostBackUrl="~/ShoppingCart.aspx"/>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:Button ID="SubmitOrderBtn" runat="server" PostBackUrl="~/OrderSubmitted.aspx" Text="Submit Order" />
              <br />
 
          </asp:Panel>

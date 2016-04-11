@@ -22,13 +22,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Panel item1Panel;
         
         /// <summary>
-        /// lblitemName1 control.
+        /// itemName1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblitemName1;
+        protected global::System.Web.UI.WebControls.Label itemName1;
         
         /// <summary>
         /// lblItem1 control.
@@ -40,6 +40,15 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblItem1;
         
         /// <summary>
+        /// itemNum1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label itemNum1;
+        
+        /// <summary>
         /// lblitemNum1 control.
         /// </summary>
         /// <remarks>
@@ -49,13 +58,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblitemNum1;
         
         /// <summary>
-        /// txtitemNum1 control.
+        /// productDesc1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtitemNum1;
+        protected global::System.Web.UI.WebControls.Label productDesc1;
         
         /// <summary>
         /// lblProductDesc1 control.
@@ -67,33 +76,6 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblProductDesc1;
         
         /// <summary>
-        /// txtProductDesc1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductDesc1;
-        
-        /// <summary>
-        /// lblContent1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContent1;
-        
-        /// <summary>
-        /// txtContent1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContent1;
-        
-        /// <summary>
         /// lblPrintEngrave1 control.
         /// </summary>
         /// <remarks>
@@ -103,13 +85,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblPrintEngrave1;
         
         /// <summary>
-        /// txtPrintEngrave1 control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrintEngrave1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
         /// lblQuantity1 control.
@@ -130,22 +112,22 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtQuantity1;
         
         /// <summary>
-        /// lblPrice1 control.
+        /// lblContent1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrice1;
+        protected global::System.Web.UI.WebControls.Label lblContent1;
         
         /// <summary>
-        /// txtPrice1 control.
+        /// txtContent1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice1;
+        protected global::System.Web.UI.WebControls.TextBox txtContent1;
         
         /// <summary>
         /// item2Panel control.
@@ -157,40 +139,49 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Panel item2Panel;
         
         /// <summary>
-        /// lblItemName2 control.
+        /// itemName2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemName2;
+        protected global::System.Web.UI.WebControls.Label itemName2;
         
         /// <summary>
-        /// txtItemName2 control.
+        /// lblItem2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtItemName2;
+        protected global::System.Web.UI.WebControls.Label lblItem2;
         
         /// <summary>
-        /// lblItemNum2 control.
+        /// itemNum2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemNum2;
+        protected global::System.Web.UI.WebControls.Label itemNum2;
         
         /// <summary>
-        /// txtItemNum2 control.
+        /// lblitemNum2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtItemNum2;
+        protected global::System.Web.UI.WebControls.Label lblitemNum2;
+        
+        /// <summary>
+        /// productDesc2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label productDesc2;
         
         /// <summary>
         /// lblProductDesc2 control.
@@ -202,33 +193,6 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblProductDesc2;
         
         /// <summary>
-        /// txtProductDesc2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductDesc2;
-        
-        /// <summary>
-        /// lblContent2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContent2;
-        
-        /// <summary>
-        /// txtContent2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContent2;
-        
-        /// <summary>
         /// lblPrintEngrave2 control.
         /// </summary>
         /// <remarks>
@@ -238,13 +202,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblPrintEngrave2;
         
         /// <summary>
-        /// txtPrintEngrave2 control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrintEngrave2;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
         /// lblQuantity2 control.
@@ -265,22 +229,22 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtQuantity2;
         
         /// <summary>
-        /// lblPrice2 control.
+        /// lblContent2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrice2;
+        protected global::System.Web.UI.WebControls.Label lblContent2;
         
         /// <summary>
-        /// txtPrice2 control.
+        /// txtContent2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice2;
+        protected global::System.Web.UI.WebControls.TextBox txtContent2;
         
         /// <summary>
         /// item3Panel control.
@@ -292,40 +256,49 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Panel item3Panel;
         
         /// <summary>
-        /// lblItemName3 control.
+        /// itemName3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemName3;
+        protected global::System.Web.UI.WebControls.Label itemName3;
         
         /// <summary>
-        /// txtItemName3 control.
+        /// lblItem3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtItemName3;
+        protected global::System.Web.UI.WebControls.Label lblItem3;
         
         /// <summary>
-        /// lblItemNum3 control.
+        /// itemNum3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemNum3;
+        protected global::System.Web.UI.WebControls.Label itemNum3;
         
         /// <summary>
-        /// txtItemNum3 control.
+        /// lblitemNum3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtItemNum3;
+        protected global::System.Web.UI.WebControls.Label lblitemNum3;
+        
+        /// <summary>
+        /// productDesc3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label productDesc3;
         
         /// <summary>
         /// lblProductDesc3 control.
@@ -337,33 +310,6 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblProductDesc3;
         
         /// <summary>
-        /// txtProductDesc3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductDesc3;
-        
-        /// <summary>
-        /// lblContent3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContent3;
-        
-        /// <summary>
-        /// txtContent3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContent3;
-        
-        /// <summary>
         /// lblPrintEngrave3 control.
         /// </summary>
         /// <remarks>
@@ -373,13 +319,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblPrintEngrave3;
         
         /// <summary>
-        /// txtPrintEngrave3 control.
+        /// DropDownList3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrintEngrave3;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
         
         /// <summary>
         /// lblQuantity3 control.
@@ -400,22 +346,49 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtQuantity3;
         
         /// <summary>
-        /// lblPrice3 control.
+        /// lblContent3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrice3;
+        protected global::System.Web.UI.WebControls.Label lblContent3;
         
         /// <summary>
-        /// txtPrice3 control.
+        /// txtContent3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice3;
+        protected global::System.Web.UI.WebControls.TextBox txtContent3;
+        
+        /// <summary>
+        /// total control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label total;
+        
+        /// <summary>
+        /// totalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalPrice;
+        
+        /// <summary>
+        /// lblCartEmpty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCartEmpty;
         
         /// <summary>
         /// CancelButton control.
