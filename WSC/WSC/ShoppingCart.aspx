@@ -23,6 +23,7 @@
              &nbsp;<asp:TextBox ID="txtQuantity1" runat="server" Width="35px"></asp:TextBox>
              &nbsp;&nbsp;&nbsp;<asp:Label ID="lblContent1" runat="server" Text="Enter Desired Content:"></asp:Label>
              &nbsp;<asp:TextBox ID="txtContent1" runat="server" MaxLength="150" Width="155px"></asp:TextBox>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="btnDelete1" runat="server" OnClick="btnDelete1_Click">Delete</asp:LinkButton>
              </asp:Panel>
              <br />
           <asp:Panel ID="item2Panel" runat="server" BorderStyle="Solid">
@@ -42,6 +43,7 @@
              &nbsp;<asp:TextBox ID="txtQuantity2" runat="server" Width="35px"></asp:TextBox>
              &nbsp;&nbsp;&nbsp;<asp:Label ID="lblContent2" runat="server" Text="Enter Desired Content:"></asp:Label>
              &nbsp;<asp:TextBox ID="txtContent2" runat="server" MaxLength="150" Width="155px"></asp:TextBox>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="btnDelete2" runat="server" OnClick="btnDelete2_Click">Delete</asp:LinkButton>
              </asp:Panel>
                          
             <br />
@@ -61,18 +63,20 @@
              &nbsp;&nbsp;&nbsp;<asp:Label ID="lblQuantity3" runat="server" Text="Quantity:"></asp:Label>
              &nbsp;<asp:TextBox ID="txtQuantity3" runat="server" Width="35px"></asp:TextBox>
              &nbsp;&nbsp;&nbsp;<asp:Label ID="lblContent3" runat="server" Text="Enter Desired Content:"></asp:Label>
-             &nbsp;<asp:TextBox ID="txtContent3" runat="server" MaxLength="150"></asp:TextBox>
+             &nbsp;<asp:TextBox ID="txtContent3" runat="server" MaxLength="150" Width="155px"></asp:TextBox>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="btnDelete3" runat="server" OnClick="btnDelete3_Click">Delete</asp:LinkButton>
              </asp:Panel>
              <br />
       
-            <asp:Label ID="total" runat="server"></asp:Label>
-             &nbsp;&nbsp;&nbsp; <asp:Label ID="totalPrice" runat="server"></asp:Label>
+           <asp:LinkButton ID="btnUpdate1" runat="server" OnClick="btnUpdate1_Click">Update</asp:LinkButton>    
+           <asp:Label ID="lblTotal" runat="server"></asp:Label>            
+           &nbsp;&nbsp;&nbsp; <asp:Label ID="lblTotalPrice" runat="server"></asp:Label>
                        
             <br />
-            <asp:Label ID="lblCartEmpty" runat="server"></asp:Label>
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
             <br /> 
            <asp:Button ID="CancelButton" runat="server" Text="Cancel Order" style="float:left;" OnClick="CancelButton_Click"/>
-           <asp:Button ID="Checkout" runat="server" Text="Checkout" style="float:right;" OnClick="Checkout_Click" PostBackUrl="~/Checkout.aspx"/>                    
+           <asp:Button ID="Checkout" runat="server" Text="Checkout" style="float:right;" OnClick="Checkout_Click"/>                    
               
    </section>
     

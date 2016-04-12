@@ -130,6 +130,15 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtContent1;
         
         /// <summary>
+        /// btnDelete1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDelete1;
+        
+        /// <summary>
         /// item2Panel control.
         /// </summary>
         /// <remarks>
@@ -245,6 +254,15 @@ namespace WSC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContent2;
+        
+        /// <summary>
+        /// btnDelete2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDelete2;
         
         /// <summary>
         /// item3Panel control.
@@ -364,31 +382,49 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtContent3;
         
         /// <summary>
-        /// total control.
+        /// btnDelete3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label total;
+        protected global::System.Web.UI.WebControls.LinkButton btnDelete3;
         
         /// <summary>
-        /// totalPrice control.
+        /// btnUpdate1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totalPrice;
+        protected global::System.Web.UI.WebControls.LinkButton btnUpdate1;
         
         /// <summary>
-        /// lblCartEmpty control.
+        /// lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCartEmpty;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+        
+        /// <summary>
+        /// lblTotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalPrice;
+        
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
         /// CancelButton control.
