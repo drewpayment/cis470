@@ -39,7 +39,7 @@ namespace WSC
             {
                 using (MySqlConnection myConn = new MySqlConnection(myConnection))
                 {
-                    using (MySqlCommand myCommand = new MySqlCommand("SELECT orders.*, purchase_item.* FROM orders JOIN purchase_item WHERE orders.orderID = @orderID AND purchase_item.orderID = @orderID"))
+                    using (MySqlCommand myCommand = new MySqlCommand("SELECT * FROM orders WHERE orderID = @orderID"))
                     {
                         using (MySqlDataAdapter sda = new MySqlDataAdapter())
                         {
@@ -52,6 +52,23 @@ namespace WSC
                                 sda.Fill(dt);
                                 GridViewReviewOrders.DataSource = dt;
                                 GridViewReviewOrders.DataBind();
+                            }
+                            myConn.Close();
+                        }
+                    }
+                    using (MySqlCommand myCommand = new MySqlCommand("SELECT * FROM purchase_item WHERE orderID = @orderID"))
+                    {
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                        {
+                            myCommand.Parameters.AddWithValue("@orderID", orderID);
+                            myCommand.Connection = myConn;
+                            myConn.Open();
+                            sda.SelectCommand = myCommand;
+                            using (DataTable dt = new DataTable())
+                            {
+                                sda.Fill(dt);
+                                GridViewReviewPurch.DataSource = dt;
+                                GridViewReviewPurch.DataBind();
                             }
                             myConn.Close();
                         }

@@ -23,7 +23,11 @@ namespace WSC
         string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
        
         protected void Page_Load(object sender, EventArgs e)
-        {           
+        {
+            if (!Page.IsPostBack)
+            {
+                GridViewCustomerInformation.DataBind();
+            }
         }
 
         /**
@@ -55,8 +59,8 @@ namespace WSC
                             using (DataTable dt = new DataTable())
                             {
                                 sda.Fill(dt);
-                                GridViewCustomerInformation.DataSource = dt;
-                                GridViewCustomerInformation.DataBind();                                                                                               
+                                GridViewCustomerInformation.DataSource = dt;                              
+                                GridViewCustomerInformation.DataBind();                                                                                           
                             }                           
                             myConn.Close();                         
                         }
@@ -78,7 +82,9 @@ namespace WSC
         protected void GridViewCustomerInformation_OnRowEditing(object sender, GridViewEditEventArgs e)
         {             
             GridViewCustomerInformation.EditIndex = e.NewEditIndex;
-            GridViewCustomerInformation.DataBind();            
+            Page_Load(null, null);
+
+           // GridViewCustomerInformation.DataBind();            
         }
 
         /**
@@ -133,13 +139,35 @@ namespace WSC
                             {
                                 sda.Fill(dt);
                                 GridViewCustomerInformation.DataSource = dt;
-                                GridViewCustomerInformation.DataBind();                            
+                                GridViewCustomerInformation.DataBind();
+                                                       
                             }
                             myConn.Close();
-                            GridViewCustomerInformation.EditIndex = -1;                          
+                            GridViewCustomerInformation.EditIndex = -1;
                         }
                     }
-                }                         
+                }
+                using (MySqlConnection myConn = new MySqlConnection(myConnection))
+                    {
+                        using (MySqlCommand myCommand = new MySqlCommand("SELECT * FROM customer WHERE custID = @custID"))
+                        {
+                            using (MySqlDataAdapter sda = new MySqlDataAdapter())
+                            {
+                                myCommand.Parameters.AddWithValue("@custID", custID);
+                                myCommand.Connection = myConn;
+                                myConn.Open();
+                                sda.SelectCommand = myCommand;
+                                using (DataTable dt = new DataTable())
+                                {
+                                    sda.Fill(dt);
+                                    GridViewCustomerInformation.DataSource = dt;
+                                    GridViewCustomerInformation.DataBind();
+                                }
+                                myConn.Close();
+                            }
+                        }
+                    }
+                            
         }
 
         /**
@@ -152,7 +180,9 @@ namespace WSC
         {
             //reset edit index on cancel 
             GridViewCustomerInformation.EditIndex = -1;
-            GridViewCustomerInformation.DataBind(); 
+            Page_Load(null, null);
+
+            //GridViewCustomerInformation.DataBind(); 
         }
 
         /**
@@ -196,22 +226,7 @@ namespace WSC
             {
                 throw;
             }   
-        }
-
-
-        
-
-        /**
-         * Save changes to grid view
-         * 
-         * @param object, EventArgs
-         * @return void
-         */
-        protected void GridViewCustomerInformation_SelectedIndexChanged(object sender, EventArgs e)
-
-        {
-            GridViewCustomerInformation.DataBind(); 
-        }
-              
+        }    
+                     
     }
 }

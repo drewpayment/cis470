@@ -6,7 +6,7 @@
       <h2>Quality Assurance</h2>
     </hgroup>
     <section id="qualityAssurance">
-    <div style="float:left; text-align: left;" class="auto-style1">
+    <div style="float:left; text-align: right;" class="auto-style1">
     
         <asp:Label ID="lblQAOrderID" runat="server" Text="Order ID: "></asp:Label>
             &nbsp;&nbsp;&nbsp;
@@ -33,7 +33,6 @@
         <asp:TextBox ID="txtQANotes" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="lblQAStatus" runat="server" Text="QA Status:" style="text-align: center"></asp:Label>
          <asp:RadioButtonList ID="rblQAStatus" runat="server" RepeatDirection="Horizontal" Width="135px">
                 <asp:ListItem Text="Pass" Value="P"/>
                 <asp:ListItem Text="Fail" Value="F" />              
