@@ -22,7 +22,7 @@ namespace WSC.Account
          */
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
+            //RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
         }
 
         /**
@@ -31,94 +31,48 @@ namespace WSC.Account
          * @param object, EventArgs
          * @return void
          */
-        protected void RegisterUser_CreatedUser(object sender, EventArgs e)
+        string connectString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
+       protected void RegisterUser_CreatedUser(object sender, EventArgs e)
         {
-            TextBox UserNameTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("UserName");
-            TextBox PasswordTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Password");
-            TextBox ConfirmPwTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("ConfirmPassword");
-            TextBox EmailTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Email");
-            TextBox FirstNameTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("FirstName");
-            TextBox LastNameTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("LastName");
-            TextBox AddressTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Address");
-            TextBox CityTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("City");
-            TextBox StateTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("State");
-            TextBox ZipTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Zip");
-            TextBox PhoneTextBox = (TextBox)RegisterUserWizardStep.ContentTemplateContainer.FindControl("Phone");
 
-            string userName = UserNameTextBox.Text;
-            string passWord = PasswordTextBox.Text;
-            string confirmPw = ConfirmPwTextBox.Text;
-            string email = EmailTextBox.Text;
-            string firstName = FirstNameTextBox.Text;
-            string lastName = LastNameTextBox.Text;
-            string address = AddressTextBox.Text;
-            string city = CityTextBox.Text;
-            string state = StateTextBox.Text;
-            string zip = ZipTextBox.Text;
-            string phone = PhoneTextBox.Text;
-            string userType = "cust";
 
-            string connectString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
-            MySqlConnection conn = new MySqlConnection(connectString);
-            MySqlCommand command, submitUser;
-            conn.Open();
 
-            if (passWord == confirmPw)
-            {
-                try
-                {
-                    command = conn.CreateCommand();
-                    command.CommandText = "SELECT userName FROM user_access";
-                    MySqlDataReader reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        foreach (string value in reader)
-                        {
-                            if (value == userName)
-                            {
-                                Response.Write("<script>alert('I'm sorry, but that username has already been used.');</script>");
-                                Response.Redirect("~/Account/Register");
-                            }
-                            else
-                            {
-                                try
-                                {
-                                    submitUser = conn.CreateCommand();
-                                    submitUser.CommandText = "INSERT INTO user_access (userName, password, userType)" +
-                                        "VALUES (@userName, @password, @userType)";
-                                    submitUser.Parameters.AddWithValue("@userName", userName);
-                                    submitUser.Parameters.AddWithValue("@password", passWord);
-                                    submitUser.Parameters.AddWithValue("@userType", userType);
-                                    submitUser.ExecuteNonQuery();
 
-                                    FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
+            //submitUser.CommandText = "INSERT INTO user_access (userName, password, userType)" +
+            //  "VALUES (@userName, @password, @userType)";
+            //submitUser.Parameters.AddWithValue("@userName", userName);
+            //submitUser.Parameters.AddWithValue("@password", passWord);
+            //submitUser.Parameters.AddWithValue("@userType", userType);
+            //submitUser.ExecuteNonQuery();
 
-                                    string continueUrl = RegisterUser.ContinueDestinationPageUrl;
-                                    if (!OpenAuth.IsLocalUrl(continueUrl))
-                                    {
-                                        continueUrl = "~/";
-                                    }
-                                    Response.Redirect(continueUrl);
-                                }
-                                catch (Exception)
-                                {
-                                    throw;
-                                }
-                                finally
-                                {
-                                    conn.Close();
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+            // FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
+
+            // string continueUrl = RegisterUser.ContinueDestinationPageUrl;
+            // if (!OpenAuth.IsLocalUrl(continueUrl))
+            /* {
+                 continueUrl = "~/";
+             }
+             Response.Redirect(continueUrl);
+         }
+         catch (Exception)
+         {
+             throw;
+         }
+         finally
+         {
+                                   
+         }
+     }
+ }
+}
+}
+catch (Exception)
+{
+throw;
+}
                 
-            }
-            ClearInputs(Page.Controls);
+}*/
+          //  ClearInputs(Page.Controls);
 
         }
 
@@ -128,7 +82,7 @@ namespace WSC.Account
          * @param ControlCollection
          * @return void
          */
-        private void ClearInputs(ControlCollection ctrls)
+      /*  private void ClearInputs(ControlCollection ctrls)
         {
             foreach (Control ctrl in ctrls)
             {
@@ -136,6 +90,58 @@ namespace WSC.Account
                     ((TextBox)ctrl).Text = string.Empty;
                 ClearInputs(ctrl.Controls);
             }
+        }*/
+
+        protected void btnSubmit_Click(object sender, EventArgs e) //function for the submit button
+        {
+            string userName = txtUsername.Text;// grabs text from the username text box
+            string passWord = txtPassword.Text; // grabs text from the password text box
+            string confirmPw = txtConfirm.Text;// grabs text from the confirm password text box
+            string email = txtEmail.Text; // grabs text from the email text box
+            string firstName = txtFirstName.Text; //grabs text from first name text box
+            string lastName = txtLastName.Text; //grabs text from last name text box
+            string address = txtAddress.Text; //grabs text from address text box
+            string city = txtCity.Text; //grabs text from city text box
+            string state = txtState.Text; //grabs text from state text box
+            string zip = txtZip.Text; // grabs text from zip code text box
+            string phone = txtPhone.Text; //grabs text from phone number text box
+            string userType = "c"; //assigns the default usertype to customer
+            
+            //created two strings with SQL insert statements in them for the two different tables we are using in this form
+            string query = "INSERT INTO user_access(userName,passWord,userType)" + "Values('" + userName + " ' , ' " + passWord + " ' , ' " + userType+ " ')";
+            string Query = "INSERT INTO customer(custEmail, custFirstName, custLastName, custAddress, custCity, custState, custZip, custPhone)" + "Values('" + email + " ' , ' " + firstName + " ' , ' " + lastName + " ' , ' " + address + " ' , ' " + city + " ' , ' " + state + " ' , ' " + zip + " ' , ' " + phone + " ')";
+
+
+            // MySqlConnection conn = new MySqlConnection(connectString);
+            using (MySqlConnection conn = new MySqlConnection(connectString))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    conn.Open(); //opening the connection to the database
+                    command.CommandText = "INSERT INTO user_access(userName,passWord,userType)" + "Values('" + userName + " ' , ' " + passWord + " ' , ' " + userType+ " ')";
+                    //creating the insert command above and then executing it below on the next line
+                    command.ExecuteNonQuery();
+                    conn.Close();//closing the connection
+                }
+                using (MySqlCommand command = new MySqlCommand(Query, conn))
+                {
+                    conn.Open(); //opening the connection
+                    command.CommandText = "INSERT INTO customer(custEmail, custFirstName, custLastName, custAddress, custCity, custState, custZip, custPhone)" + "Values('" + email + " ' , ' " + firstName + " ' , ' " + lastName + " ' , ' " + address + " ' , ' " + city + " ' , ' " + state + " ' , ' " + zip + " ' , ' " + phone + " ')";
+                    //creating the insert command on the line above and then executing it on the next line down.
+                    command.ExecuteNonQuery();
+                    conn.Close(); //closing the connection
+                }
+            }
         }
     }
 }
+         
+
+                               
+                                
+                                
+                                
+        
+                          
+                       
+  
