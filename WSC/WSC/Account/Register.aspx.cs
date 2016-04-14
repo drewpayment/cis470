@@ -105,7 +105,8 @@ throw;
             string state = txtState.Text; //grabs text from state text box
             string zip = txtZip.Text; // grabs text from zip code text box
             string phone = txtPhone.Text; //grabs text from phone number text box
-            string userType = "c"; //assigns the default usertype to customer
+            string userType = "cust"; //assigns the default usertype to customer
+            int accessID; // initializes integer accessID
             
             //created two strings with SQL insert statements in them for the two different tables we are using in this form
             string query = "INSERT INTO user_access(userName,passWord,userType)" + "Values('" + userName + " ' , ' " + passWord + " ' , ' " + userType+ " ')";
@@ -118,15 +119,17 @@ throw;
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     conn.Open(); //opening the connection to the database
-                    command.CommandText = "INSERT INTO user_access(userName,passWord,userType)" + "Values('" + userName + " ' , ' " + passWord + " ' , ' " + userType+ " ')";
+                    command.CommandText = "INSERT INTO user_access(userName,passWord,userType)" + "Values('" + userName + "' , '" + passWord + "' , '" + userType + "')";
                     //creating the insert command above and then executing it below on the next line
-                    command.ExecuteNonQuery();
+                    accessID = Convert.ToInt32(command.ExecuteScalar());
                     conn.Close();//closing the connection
                 }
                 using (MySqlCommand command = new MySqlCommand(Query, conn))
                 {
                     conn.Open(); //opening the connection
-                    command.CommandText = "INSERT INTO customer(custEmail, custFirstName, custLastName, custAddress, custCity, custState, custZip, custPhone)" + "Values('" + email + " ' , ' " + firstName + " ' , ' " + lastName + " ' , ' " + address + " ' , ' " + city + " ' , ' " + state + " ' , ' " + zip + " ' , ' " + phone + " ')";
+                    command.CommandText = "INSERT INTO customer(accessID, custEmail, custFirstName, custLastName, custAddress, custCity, custState, custZip, custPhone) " 
+                        + "VALUES "
+                        + "(LAST_INSERT_ID(), '" + email + "' , '" + firstName + "' , '" + lastName + "' , '" + address + "' , '" + city + "' , '" + state + "' , '" + zip + "' , '" + phone + "')";
                     //creating the insert command on the line above and then executing it on the next line down.
                     command.ExecuteNonQuery();
                     conn.Close(); //closing the connection
