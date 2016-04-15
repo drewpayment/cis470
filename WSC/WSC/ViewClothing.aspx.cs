@@ -21,10 +21,10 @@ namespace WSC
          * @param object, EventArgs
          * @return void
          */
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)//function for clicking the button for viewing clothing
         {
-            Session["CartItem1"] = "Clothing";
-            Response.Redirect("CartItemAdded.aspx");           
+            Session["CartItem1"] = "Clothing";//cartItem1 session variable equal to clothing
+            Response.Redirect("CartItemAdded.aspx");   //redirect to cartItemAdded page        
         }        
 	}
 }

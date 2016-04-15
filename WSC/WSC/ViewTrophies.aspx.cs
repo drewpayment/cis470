@@ -14,10 +14,10 @@ namespace WSC
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)//function for clicking on button for trophy
         {
-            Session["CartItem3"] = "Trophy";
-            Response.Redirect("CartItemAdded.aspx");
+            Session["CartItem3"] = "Trophy";//session variable of cartItem3 is equal to trophy
+            Response.Redirect("CartItemAdded.aspx");// redirect to cartItemAdded
         }
     }
 }
