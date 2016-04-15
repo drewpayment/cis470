@@ -27,7 +27,10 @@ namespace WSC
             }
 
         }
-
+        //variables for purchase item ids 
+        string purchItemID1 = null;
+        string purchItemID2 = null;
+        string purchItemID3 = null;
         protected void Checkout_Click(object sender, EventArgs e)
         {
             if (Session["CartItem1"] != null)
@@ -49,6 +52,7 @@ namespace WSC
                 int purchQty = Convert.ToInt16(txtQuantity1.Text);
                 decimal purchItemCost = 15;
                 string contentDesc = txtContent1.Text;
+                Session["content1"] = contentDesc;
 
                 string query1 = "INSERT INTO purchase_item(specialistID, jobID, mediaID, purchQty, purchItemCost, contentDescription)"
                     + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')";
@@ -59,14 +63,26 @@ namespace WSC
                 {
                     using (MySqlCommand command = new MySqlCommand(query1, myConn))
                     {
+                        MySql.Data.MySqlClient.MySqlDataReader myDataReader;
+
                         myConn.Open();
                         command.CommandText = "INSERT INTO purchase_item(specialistID, jobID, mediaID, purchQty, purchItemCost, contentDescription)"
-                    + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')";
+                    + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')"; 
                         command.ExecuteNonQuery();
+                        command.CommandText = "SELECT purchaseItemID FROM purchase_item ORDER BY purchaseItemID DESC LIMIT 1";
+                        myDataReader = command.ExecuteReader();
+                         while (myDataReader.Read())
+                        //gets purchase item id from row just entered into the database                       
+                        {
+                            purchItemID1 = myDataReader["purchaseItemID"].ToString(); 
+                        }
+                        myDataReader.Close();
                         myConn.Close();
                     }
                 }
             }
+            
+            Session["purchItem1"] = purchItemID1;
             if (Session["CartItem2"] != null)
             {
                 int mediaID = Convert.ToInt16(lblitemNum2.Text);
@@ -86,6 +102,7 @@ namespace WSC
                 int purchQty = Convert.ToInt16(txtQuantity2.Text);
                 decimal purchItemCost = 35;
                 string contentDesc = txtContent2.Text;
+                Session["content2"] = contentDesc;
 
                 string query2 = "INSERT INTO purchase_item(specialistID, jobID, mediaID, purchQty, purchItemCost, contentDescription)"
                     + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')";
@@ -94,16 +111,26 @@ namespace WSC
                 string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
                 using (MySqlConnection myConn = new MySqlConnection(myConnection))
                 {
+                    MySql.Data.MySqlClient.MySqlDataReader myDataReader;
                     using (MySqlCommand command = new MySqlCommand(query2, myConn))
                     {
                         myConn.Open();
                         command.CommandText = "INSERT INTO purchase_item(specialistID, jobID, mediaID, purchQty, purchItemCost, contentDescription)"
                     + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')";
                         command.ExecuteNonQuery();
+                        command.CommandText = "SELECT purchaseItemID FROM purchase_item ORDER BY purchaseItemID DESC LIMIT 1";
+                        myDataReader = command.ExecuteReader();
+                        while (myDataReader.Read())
+                        //gets purchase item id from row just entered into the database                       
+                        {
+                            purchItemID2 = myDataReader["purchaseItemID"].ToString();
+                        }
+                        myDataReader.Close();
                         myConn.Close();
                     }
                 }
             }
+            Session["purchItem2"] = purchItemID2;
             if (Session["CartItem3"] != null)
             {
                 int mediaID = Convert.ToInt16(lblitemNum3.Text);
@@ -123,7 +150,8 @@ namespace WSC
                 int purchQty = Convert.ToInt16(txtQuantity3.Text);
                 decimal purchItemCost = 25;
                 string contentDesc = txtContent3.Text;
-
+                Session["content3"] = contentDesc;
+                    
                 string query3 = "INSERT INTO purchase_item(specialistID, jobID, mediaID, purchQty, purchItemCost, contentDescription)"
                     + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')";
 
@@ -131,15 +159,24 @@ namespace WSC
                 string myConnection = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ConnectionString.ToString();
                 using (MySqlConnection myConn = new MySqlConnection(myConnection))
                 {
+                    MySql.Data.MySqlClient.MySqlDataReader myDataReader;
                     using (MySqlCommand command = new MySqlCommand(query3, myConn))
                     {
                         myConn.Open();
                         command.CommandText = "INSERT INTO purchase_item(specialistID, jobID, mediaID, purchQty, purchItemCost, contentDescription)"
                     + "Values(' " + specialistID + " ', ' " + jobID + " ' , ' " + mediaID + "' , ' " + purchQty + "', ' " + purchItemCost + " ' , ' " + contentDesc + " ')";
                         command.ExecuteNonQuery();
+                        command.CommandText = "SELECT purchaseItemID FROM purchase_item ORDER BY purchaseItemID DESC LIMIT 1";
+                        myDataReader = command.ExecuteReader();
+                        while (myDataReader.Read())
+                        //gets purchase item id from row just entered into the database                       
+                        {
+                            purchItemID3 = myDataReader["purchaseItemID"].ToString();
+                        }
+                        myDataReader.Close();
                         myConn.Close();
                     }
-                }
+                } Session["purchItem3"] = purchItemID3;
             } Response.Redirect("Checkout.aspx");
 
            
@@ -152,7 +189,7 @@ namespace WSC
             if (Session["CartItem1"] != null)
             {
                 lblItem1.Text = Convert.ToString(Session["CartItem1"]);
-                lblitemNum1.Text = "1";
+                lblitemNum1.Text = "1";                
                 lblProductDesc1.Text = "Shirt XYZ (White) - Lg";
                 item1Panel.Visible = true;
                 cartitems = true;
@@ -236,7 +273,9 @@ namespace WSC
             else
             {
                 int qty1 = Convert.ToInt16(txtQuantity1.Text);
+                Session["qty1"] = qty1;
                 unitPrice1 = GetUnitPrice(15, qty1);
+                Session["unitPrice1"] = unitPrice1;
             }
             if (txtQuantity2.Text == null || txtQuantity2.Text == "")
             {
@@ -245,7 +284,9 @@ namespace WSC
             else
             {
                 int qty2 = Convert.ToInt16(txtQuantity2.Text);
+                Session["qty2"] = qty2;
                 unitPrice2 = GetUnitPrice(35, qty2);
+                Session["unitPrice2"] = unitPrice2;
             }
             if (txtQuantity3.Text == null || txtQuantity3.Text == "")
             {
@@ -254,7 +295,9 @@ namespace WSC
             else
             {
                 int qty3 = Convert.ToInt16(txtQuantity3.Text);
+                Session["qty3"] = qty3;
                 unitPrice3 = GetUnitPrice(25, qty3);
+                Session["unitPrice3"] = unitPrice3;
             }
             Total_Display();
         }

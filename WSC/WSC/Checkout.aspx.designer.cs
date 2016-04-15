@@ -22,24 +22,6 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.HyperLink returnShopping;
         
         /// <summary>
-        /// lblCheckoutOrderID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCheckoutOrderID;
-        
-        /// <summary>
-        /// lblOrderID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOrderID;
-        
-        /// <summary>
         /// lblCheckoutOrderDate control.
         /// </summary>
         /// <remarks>
@@ -49,22 +31,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblCheckoutOrderDate;
         
         /// <summary>
-        /// Date control.
+        /// lblDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Date;
-        
-        /// <summary>
-        /// lblCheckoutCustID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCheckoutCustID;
+        protected global::System.Web.UI.WebControls.Label lblDate;
         
         /// <summary>
         /// lblCustID control.
@@ -76,22 +49,40 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblCustID;
         
         /// <summary>
-        /// lblCheckoutEmpID control.
+        /// txtCustID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCheckoutEmpID;
+        protected global::System.Web.UI.WebControls.TextBox txtCustID;
         
         /// <summary>
-        /// txtCheckoutEmpID control.
+        /// lblCheckoutCustID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCheckoutEmpID;
+        protected global::System.Web.UI.WebControls.Label lblCheckoutCustID;
+        
+        /// <summary>
+        /// txtBillFirst control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBillFirst;
+        
+        /// <summary>
+        /// txtBillLast control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBillLast;
         
         /// <summary>
         /// checkoutItemPanel1 control.
@@ -103,22 +94,22 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Panel checkoutItemPanel1;
         
         /// <summary>
-        /// lblCheckItemName1 control.
+        /// lblCheckItemNum1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCheckItemName1;
+        protected global::System.Web.UI.WebControls.Label lblCheckItemNum1;
         
         /// <summary>
-        /// lblItemName1 control.
+        /// lblItemNum1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemName1;
+        protected global::System.Web.UI.WebControls.Label lblItemNum1;
         
         /// <summary>
         /// lblCheckMediaType1 control.
@@ -220,22 +211,22 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Panel checkoutItemPanel2;
         
         /// <summary>
-        /// lblCheckItemName2 control.
+        /// lblCheckItemNum2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCheckItemName2;
+        protected global::System.Web.UI.WebControls.Label lblCheckItemNum2;
         
         /// <summary>
-        /// lblItemName2 control.
+        /// lblItemNum2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemName2;
+        protected global::System.Web.UI.WebControls.Label lblItemNum2;
         
         /// <summary>
         /// lblCheckMediaType2 control.
@@ -337,22 +328,22 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Panel checkoutItemPanel3;
         
         /// <summary>
-        /// lblCheckItemName3 control.
+        /// lblCheckItemNum3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCheckItemName3;
+        protected global::System.Web.UI.WebControls.Label lblCheckItemNum3;
         
         /// <summary>
-        /// lblItemName3 control.
+        /// lblItemNum3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemName3;
+        protected global::System.Web.UI.WebControls.Label lblItemNum3;
         
         /// <summary>
         /// lblCheckMediaType3 control.
@@ -445,6 +436,15 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblPrice3;
         
         /// <summary>
+        /// lblTotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalPrice;
+        
+        /// <summary>
         /// addressPanel control.
         /// </summary>
         /// <remarks>
@@ -472,13 +472,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblShipAddress;
         
         /// <summary>
-        /// txtShipAddress control.
+        /// txtBillAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShipAddress;
+        protected global::System.Web.UI.WebControls.TextBox txtBillAddress;
         
         /// <summary>
         /// lblShipCity control.
@@ -490,13 +490,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblShipCity;
         
         /// <summary>
-        /// txtShipCity control.
+        /// txtBillCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShipCity;
+        protected global::System.Web.UI.WebControls.TextBox txtBillCity;
         
         /// <summary>
         /// lblShipState control.
@@ -508,87 +508,6 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.Label lblShipState;
         
         /// <summary>
-        /// txtShipState control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShipState;
-        
-        /// <summary>
-        /// lblShipZip control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShipZip;
-        
-        /// <summary>
-        /// txtShipZip control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShipZip;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// lblBillAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBillAddress;
-        
-        /// <summary>
-        /// txtBillAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBillAddress;
-        
-        /// <summary>
-        /// lblBillCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBillCity;
-        
-        /// <summary>
-        /// txtBillCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBillCity;
-        
-        /// <summary>
-        /// lblBillState control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBillState;
-        
-        /// <summary>
         /// txtBillState control.
         /// </summary>
         /// <remarks>
@@ -598,13 +517,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtBillState;
         
         /// <summary>
-        /// lblBillZip control.
+        /// lblShipZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBillZip;
+        protected global::System.Web.UI.WebControls.Label lblShipZip;
         
         /// <summary>
         /// txtBillZip control.
@@ -679,13 +598,13 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtCCExpDate;
         
         /// <summary>
-        /// Button1 control.
+        /// btnCancelCheckout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnCancelCheckout;
         
         /// <summary>
         /// SubmitOrderBtn control.
