@@ -22,7 +22,7 @@ namespace WSC.Account
          */
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
+            RegisterHyperLink.NavigateUrl = "Register";//hyper link for the register page if customer doesn't have a login
            
             var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
             if (!String.IsNullOrEmpty(returnUrl))
@@ -40,13 +40,13 @@ namespace WSC.Account
          */
         private bool SiteSpecificAuthenticationMethod(string UserName, string Password)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ToString();
-            MySqlConnection mysql = new MySqlConnection(connectionString);
-            MySqlDataAdapter adapter;
-            DataTable table = new DataTable();
+            string connectionString = ConfigurationManager.ConnectionStrings["wscompanyConnectionString"].ToString();//creating a connection string for SQL
+            MySqlConnection mysql = new MySqlConnection(connectionString);//creating a new connection in SQL
+            MySqlDataAdapter adapter;//new SQL adapter
+            DataTable table = new DataTable(); //new data table setup 
 
-            adapter = new MySqlDataAdapter("SELECT * FROM user_access WHERE userName = '" + UserName + "' and password = '" + Password + "'", mysql);
-            adapter.Fill(table);
+            adapter = new MySqlDataAdapter("SELECT * FROM user_access WHERE userName = '" + UserName + "' and password = '" + Password + "'", mysql); //selecting everything from the user_access table and put it into the adapter
+            adapter.Fill(table); //use the adapter to fill in the data table
 
             List<DataRow> foundRow = table.Select("userName = '" + UserName + "'").ToList();
 
