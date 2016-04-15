@@ -1,4 +1,18 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*
+Module Name: Quality Assurance  
+Program Name: WSC eCommerce
+Author: Rebecca Kolb
+CoAuthor: Sarah Barreca
+Date: 3/28/16 - 4/15/16
+Purpose: This form is used by employees of WSC to perform and track QA tests on printing and engraving jobs. 
+System Functions & Processes: 
+	Page_Load: initializes page components & displays links
+	btnSubmitQA_Click: gets the user input and saves it to the Quality Assurance table in the database. 		
+
+Change Log:	4/2/16 Page creation and design completed 
+		4/9/12 Processes and functions completed 	
+*/
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

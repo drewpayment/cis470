@@ -1,4 +1,20 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*
+Module Name: Employee Review Order 
+Program Name: WSC eCommerce
+Author: Sarah Barreca
+CoAuthor: Rebecca Kolb
+Date: 3/28/16 - 4/15/16
+Purpose: This form is used by the employees of WSC to review order information and their associated purchase items. 
+System Functions & Processes: 
+	Page_Load: initializes page components & displays links
+	btnFindOrder: takes order id from user and searches orders table and purchase_item table in database for matching records.  	
+
+Change Log:	4/2/16 Page creation and design
+		4/5/16 Work on processes  and dataset 
+		4/9/16 Functions and processes completed 	
+	
+*/
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

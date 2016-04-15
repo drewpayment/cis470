@@ -1,4 +1,19 @@
-﻿using MySql.Data.MySqlClient;
+﻿/* Module Name: Login
+Program Name: WSC eCommerce
+Author: Andrew Payment
+CoAuthor: Sarah Barreca (Front End Only)
+Date: 3/28/16 - 4/15/16
+Purpose: This form is used to log in users, verify credentials, and 
+enables the appropriate user permissions. 
+System Functions & Processes: 
+	Page_Load: initializes page components & links
+	SiteSpecificAuthenticationMethod: authenticates user in database UserAccess table
+	OnAuthenticate: sets authentication
+
+ * Change Log:	3/29/16 Page creation and design
+		4/4/16 Function/Processes completed 
+ */
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

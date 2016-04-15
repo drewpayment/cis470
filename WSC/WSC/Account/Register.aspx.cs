@@ -1,4 +1,22 @@
-﻿using System;
+﻿/*
+Module Name: Registration
+Program Name: WSC eCommerce
+Author: Andrew Payment
+CoAuthor: Rebecca Kolb 
+Date: 3/28/16 - 4/15/16
+Purpose: This form is used to register new users and input their data into the Customer
+and UserAccess tables in the database. 
+System Functions & Processes: 
+	Page_Load: initializes page components & links
+	RegisterUser_CreatedUser: inputs new user data into database
+	BtnSubmit_Click: query for user information input 
+
+Change Log:	3/29/16 Page creation and design
+		4/7/16 Add userid cookie
+		4/13/16 Create query for user info input into database
+		4/14/16 Function/Processes completed
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

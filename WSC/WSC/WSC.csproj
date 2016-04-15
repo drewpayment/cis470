@@ -315,7 +315,6 @@
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BusinessLayer\ShoppingCart.cs" />
     <Compile Include="CartItemAdded.aspx.cs">
       <DependentUpon>CartItemAdded.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -330,7 +329,6 @@
     <Compile Include="Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\ClsDataLayer.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

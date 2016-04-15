@@ -1,10 +1,27 @@
 ﻿using System;
+/*
+Module Name: Edit Catalog
+Program Name: WSC eCommerce
+Author: Sarah Barreca
+CoAuthor: Rebecca Kolb
+Date: 3/28/16 - 4/15/16
+Purpose: This form is used by the employees of WSC to add media to the catalog or to update 
+current media items in stock.  
+System Functions & Processes: 
+	Page_Load: initializes page components & displays links
+	Button1_Click: get user input and populate catalog table in database with new item
+	OnRowEditing: gridview event handler for editing row in database
+	OnRowUpdating: gridview control for updating database record 
+	OnRowCancelingEdit: gridview control to cancel edit to record
+	OnRowDeleting: gridview control to delete record from database	 	
+
+Change Log:	4/2/16 Page creation, design, and processes completed		
+*/
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WSC.BusinessLayer;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using System.Configuration;
