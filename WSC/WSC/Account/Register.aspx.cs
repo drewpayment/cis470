@@ -151,9 +151,9 @@ throw;
                     //creating the insert command on the line above and then executing it on the next line down.
                     command.ExecuteNonQuery();
                     conn.Close(); //closing the connection
-                }
+                } Response.Redirect("Login.aspx"); 
             }
-        }
+        } 
     }
 }
          

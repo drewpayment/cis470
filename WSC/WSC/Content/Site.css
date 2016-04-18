@@ -247,6 +247,7 @@ hgroup.title h1, hgroup.title h2 {
 hgroup.title h2 {
     font-weight: normal;
     margin-left: 3px;
+    text-align: center;
 }
 
 /* features */
