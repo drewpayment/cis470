@@ -13,22 +13,22 @@ namespace WSC {
     public partial class QualityAssurance {
         
         /// <summary>
-        /// lblQAOrderID control.
+        /// lblpurchID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQAOrderID;
+        protected global::System.Web.UI.WebControls.Label lblpurchID;
         
         /// <summary>
-        /// txtQAOrderID control.
+        /// txtQAPurchID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQAOrderID;
+        protected global::System.Web.UI.WebControls.TextBox txtQAPurchID;
         
         /// <summary>
         /// lblQAJobID control.
@@ -85,24 +85,6 @@ namespace WSC {
         protected global::System.Web.UI.WebControls.TextBox txtQASpecialID;
         
         /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// txtQAID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQAID;
-        
-        /// <summary>
         /// lblQANotes control.
         /// </summary>
         /// <remarks>
@@ -137,5 +119,14 @@ namespace WSC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmitQA;
+        
+        /// <summary>
+        /// lblConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirm;
     }
 }

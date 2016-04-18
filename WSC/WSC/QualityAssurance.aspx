@@ -8,9 +8,9 @@
     <section id="qualityAssurance">
     <div style="float:left; text-align: right;" class="auto-style1">
     
-        <asp:Label ID="lblQAOrderID" runat="server" Text="Order ID: "></asp:Label>
+        <asp:Label ID="lblpurchID" runat="server" Text="Purchase Item ID: "></asp:Label>
             &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtQAOrderID" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtQAPurchID" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="lblQAJobID" runat="server" Text="Job ID: "></asp:Label>
             &nbsp;&nbsp;&nbsp;
@@ -25,8 +25,6 @@
         <asp:TextBox ID="txtQASpecialID" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Quality Assurance ID: "></asp:Label>
-        <asp:TextBox ID="txtQAID" runat="server"></asp:TextBox>
         <br />
          <asp:Label ID="lblQANotes" runat="server" Text="Inspection Notes: "></asp:Label>
             &nbsp;&nbsp;&nbsp;
@@ -44,6 +42,7 @@
 
     </div>
    </section>
+    <asp:Label ID="lblConfirm" runat="server" style="font-weight: 700; font-size: large"></asp:Label>
 </asp:Content>
 <asp:Content runat="server" contentplaceholderid="HeadContent">
     </asp:Content>
